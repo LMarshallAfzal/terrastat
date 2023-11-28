@@ -3,17 +3,23 @@ import "./App.css";
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/leaflet";
 import countriesData from "./data/countries.js";
+import { latLng, latLngBounds } from "leaflet";
 import { MapContainer, TileLayer, Polygon } from "react-leaflet";
+
+const southwestCorner = latLng([-85.0511, -180]);
+const northeastCorner = latLng([85.0511, 180]);
+const bounds = latLngBounds(southwestCorner, northeastCorner);
 
 function App() {
   const [clickedPolygonId, setClickedPolygonId] = useState(null);
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={4}>
+    <MapContainer maxBounds={bounds} maxZoom={18} minZoom={3} center={[51.505, -0.09]} zoom={4}>
       <TileLayer
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=2K46SsHb5CdTvQzDyjPq"
       />
+
       {countriesData.features.map((country) => {
         const coordinates = country.geometry.coordinates[0].map((item) => [
           item[1],
