@@ -12,7 +12,7 @@ function App() {
     <MapContainer center={[51.505, -0.09]} zoom={4}>
       <TileLayer
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url="https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=2K46SsHb5CdTvQzDyjPq"
       />
       {countriesData.features.map((country) => {
         const coordinates = country.geometry.coordinates[0].map((item) => [
