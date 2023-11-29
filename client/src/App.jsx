@@ -23,9 +23,29 @@ function App() {
     } else {
       setClickedCountry(country);
       setFormattedCountry(country.properties.name);
+      fetchCountryData(formattedCountry)
       setSidebarIsOpen(true);
     }
     console.log(country);
+  };
+
+  const fetchCountryData = async (countryName) => {
+    const url = `https://restcountries.com/v3.1/name/${countryName}`;
+  
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+  
+      if (response.ok) {
+        // Process and return the country data
+        console.log(data);
+        return data;
+      } else {
+        throw new Error('Error fetching country data');
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleSidebarClose = () => {
@@ -110,6 +130,7 @@ function App() {
           >
             <h2>Country Details</h2>
             <p>Country Name: {formattedCountry} </p>
+            <p>Official Country Name: {formattedCountry} </p>
             <button onClick={handleSidebarClose}>Close Sidebar</button>
           </div>
         </MapContainer>
