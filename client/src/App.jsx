@@ -12,14 +12,17 @@ const bounds = latLngBounds(southwestCorner, northeastCorner);
 
 function App() {
   const [clickedCountry, setClickedCountry] = useState(null);
+  const [formattedCountry, setFormattedCountry] = useState("");
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
   const handleCountryClick = (isClicked, country) => {
     if (isClicked) {
       setClickedCountry(null);
+      setFormattedCountry("");
       setSidebarIsOpen(false);
     } else {
       setClickedCountry(country);
+      setFormattedCountry(country.properties.name);
       setSidebarIsOpen(true);
     }
     console.log(country);
@@ -106,7 +109,7 @@ function App() {
             }}
           >
             <h2>Country Details</h2>
-            {/* <p>Country Name: {country.properties.name} </p> */}
+            <p>Country Name: {formattedCountry} </p>
             <button onClick={handleSidebarClose}>Close Sidebar</button>
           </div>
         </MapContainer>
