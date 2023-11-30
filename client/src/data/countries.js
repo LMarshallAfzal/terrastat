@@ -3077,7 +3077,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "United States of America",
+                name: "United States of America - t",
                 code: "US1",
 
             },
@@ -3128,7 +3128,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "United States of America",
+                name: "United States of America - g",
                 code: "US1",
 
             },
@@ -3163,7 +3163,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "United States of America",
+                name: "United States of America - p",
                 code: "US1",
 
             },
@@ -3214,7 +3214,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "United States of America",
+                name: "United States of America - x",
                 code: "US1",
 
             },
@@ -3257,7 +3257,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "United States of America",
+                name: "United States of America - q",
                 code: "US1",
 
             },
@@ -3300,7 +3300,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "United States of America",
+                name: "United States of America - l",
                 code: "US1",
 
             },
@@ -5850,7 +5850,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "Canada -13",
+                name: "Canada - 13",
                 code: "CAN",
 
             },
@@ -6397,7 +6397,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "Canada -18",
+                name: "Canada - 18",
                 code: "CAN",
 
             },
@@ -6559,7 +6559,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "Canada -19",
+                name: "Canada - 19",
                 code: "CAN",
 
             },
@@ -8590,7 +8590,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "United States of America",
+                name: "United States of America - z",
                 code: "US1",
 
             },
@@ -28926,7 +28926,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "Angola",
+                name: "Angola - 1",
                 code: "AGO",
 
             },
@@ -29206,7 +29206,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "Angola",
+                name: "Angola - 2",
                 code: "AGO",
 
             },
