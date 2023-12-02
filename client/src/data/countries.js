@@ -4,6 +4,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Nicaragua",
                 name: "Nicaragua",
                 code: "NIC",
 
@@ -227,6 +228,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Haiti",
                 name: "Haiti",
                 code: "HTI",
 
@@ -326,6 +328,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Dominican Republic",
                 name: "Dominican Republic",
                 code: "DOM",
 
@@ -445,6 +448,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "El Salvador",
                 name: "El Salvador",
                 code: "SLV",
 
@@ -540,6 +544,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Guatemala",
                 name: "Guatemala",
                 code: "GTM",
 
@@ -695,6 +700,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Costa Rica",
                 name: "Costa Rica",
                 code: "CRI",
 
@@ -854,6 +860,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Cuba",
                 name: "Cuba",
                 code: "CU1",
 
@@ -1037,6 +1044,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Honduras",
                 name: "Honduras",
                 code: "HND",
 
@@ -1280,6 +1288,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Panama",
                 name: "Panama",
                 code: "PAN",
 
@@ -1503,7 +1512,8 @@ const countriesData = {
         // {
         //     type: "Feature",
         //     properties: {
-        //         name: "Denmark",
+        // formattedName: "Denmark",//         
+        // name: "Denmark",
         //         code: "DN1",
 
         //     },
@@ -2046,6 +2056,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America",
                 code: "US1",
 
@@ -2993,6 +3004,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - Island 1",
                 code: "US5",
 
@@ -3077,6 +3089,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - t",
                 code: "US1",
 
@@ -3128,6 +3141,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - g",
                 code: "US1",
 
@@ -3163,6 +3177,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - p",
                 code: "US1",
 
@@ -3214,6 +3229,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - x",
                 code: "US1",
 
@@ -3257,6 +3273,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - q",
                 code: "US1",
 
@@ -3300,6 +3317,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - l",
                 code: "US1",
 
@@ -3353,6 +3371,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - Alaska",
                 code: "US1",
 
@@ -3928,6 +3947,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - Island 8",
                 code: "USAL",
 
@@ -3993,6 +4013,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 1",
                 code: "CAN",
 
@@ -5105,6 +5126,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 2",
                 code: "CAN",
 
@@ -5148,6 +5170,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 3",
                 code: "CAN",
 
@@ -5207,6 +5230,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 4",
                 code: "CAN",
 
@@ -5254,6 +5278,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 5",
                 code: "CAN",
 
@@ -5301,6 +5326,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 6",
                 code: "CAN",
 
@@ -5344,6 +5370,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 7",
                 code: "CAN",
 
@@ -5395,6 +5422,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 8",
                 code: "CAN",
 
@@ -5522,6 +5550,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 9",
                 code: "CAN",
 
@@ -5565,6 +5594,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 10",
                 code: "CAN",
 
@@ -5608,6 +5638,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 11",
                 code: "CAN",
 
@@ -5755,6 +5786,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 12",
                 code: "CAN",
 
@@ -5850,6 +5882,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 13",
                 code: "CAN",
 
@@ -6157,6 +6190,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 14",
                 code: "CAN",
 
@@ -6216,6 +6250,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 15",
                 code: "CAN",
 
@@ -6279,6 +6314,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 16",
                 code: "CAN",
 
@@ -6338,6 +6374,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 17",
                 code: "CAN",
 
@@ -6397,6 +6434,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 18",
                 code: "CAN",
 
@@ -6476,6 +6514,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 18",
                 code: "CAN",
 
@@ -6559,6 +6598,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 19",
                 code: "CAN",
 
@@ -6662,6 +6702,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 20",
                 code: "CAN",
 
@@ -6857,6 +6898,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 21",
                 code: "CAN",
 
@@ -6932,6 +6974,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 22",
                 code: "CAN",
 
@@ -6971,6 +7014,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 23",
                 code: "CAN",
 
@@ -7038,6 +7082,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 24",
                 code: "CAN",
 
@@ -7137,6 +7182,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 25",
                 code: "CAN",
 
@@ -7412,6 +7458,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 26",
                 code: "CAN",
 
@@ -7463,6 +7510,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 27",
                 code: "CAN",
 
@@ -7522,6 +7570,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 28",
                 code: "CAN",
 
@@ -7569,6 +7618,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Canada",
                 name: "Canada - 29",
                 code: "CAN",
 
@@ -7620,6 +7670,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Mexico",
                 name: "Mexico",
                 code: "MEX",
 
@@ -8315,6 +8366,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Belize",
                 name: "Belize",
                 code: "BLZ",
 
@@ -8410,6 +8462,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "The Bahamas",
                 name: "The Bahamas - 1",
                 code: "BHS",
 
@@ -8450,6 +8503,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "The Bahamas",               
                 name: "The Bahamas - 2",
                 code: "BHS",
 
@@ -8494,6 +8548,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "The Bahamas",               
                 name: "The Bahamas - 3",
                 code: "BHS",
 
@@ -8543,6 +8598,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Trinidad and Tobago",
                 name: "Trinidad and Tobago",
                 code: "TTO",
 
@@ -8590,6 +8646,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United States of America",
                 name: "United States of America - z",
                 code: "US1",
 
@@ -8641,6 +8698,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Jamaica",
                 name: "Jamaica",
                 code: "JAM",
 
@@ -8700,6 +8758,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Chile",
                 name: "Chile - 1",
                 code: "CHL",
 
@@ -8796,6 +8855,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Chile",
                 name: "Chile - 2",
                 code: "CHL",
 
@@ -9188,6 +9248,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Bolivia",
                 name: "Bolivia",
                 code: "BOL",
 
@@ -9443,6 +9504,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Peru",
                 name: "Peru",
                 code: "PER",
 
@@ -9762,6 +9824,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Argentina",
                 name: "Argentina - 1",
                 code: "ARG",
 
@@ -9822,6 +9885,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Argentina",
                 name: "Argentina - 2",
                 code: "ARG",
 
@@ -10279,6 +10343,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Suriname",
                 name: "Suriname",
                 code: "SUR",
 
@@ -10398,6 +10463,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Guyana",
                 name: "Guyana",
                 code: "GUY",
 
@@ -10573,6 +10639,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Brazil",
                 name: "Brazil",
                 code: "BRA",
 
@@ -11400,6 +11467,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Uruguay",
                 name: "Uruguay",
                 code: "URY",
 
@@ -11499,6 +11567,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Ecuador",
                 name: "Ecuador",
                 code: "ECU",
 
@@ -11646,6 +11715,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Colombia",
                 name: "Colombia",
                 code: "COL",
 
@@ -12061,6 +12131,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Paraguay",
                 name: "Paraguay",
                 code: "PRY",
 
@@ -12208,6 +12279,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Venezuela",
                 name: "Venezuela",
                 code: "VEN",
 
@@ -12591,6 +12663,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United Kingdom",
                 name: "United Kingdom",
                 code: "GB1",
 
@@ -12646,6 +12719,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 1",
                 code: "IDN",
 
@@ -12814,6 +12888,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 2",
                 code: "IDN",
 
@@ -12865,6 +12940,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 3",
                 code: "IDN",
 
@@ -12908,6 +12984,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 4",
                 code: "IDN",
 
@@ -13079,6 +13156,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 5",
                 code: "IDN",
 
@@ -13130,6 +13208,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 6",
                 code: "IDN",
 
@@ -13169,6 +13248,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 7",
                 code: "IDN",
 
@@ -13236,6 +13316,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 8",
                 code: "IDN",
 
@@ -13431,6 +13512,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 8",
                 code: "IDN",
 
@@ -13474,6 +13556,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 9",
                 code: "IDN",
 
@@ -13525,6 +13608,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 10",
                 code: "IDN",
 
@@ -13580,6 +13664,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 11",
                 code: "IDN",
 
@@ -13687,6 +13772,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Indonesia",
                 name: "Indonesia - 12",
                 code: "IDN",
 
@@ -13843,6 +13929,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "India",
                 name: "India",
                 code: "IND",
 
@@ -14402,6 +14489,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Cyprus",
                 name: "Cyprus",
                 code: "CYP",
 
@@ -14477,6 +14565,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Malaysia",
                 name: "Malaysia - 1",
                 code: "MYS",
 
@@ -14592,6 +14681,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Malaysi",
                 name: "Malaysi - 2",
                 code: "MYS",
 
@@ -14756,6 +14846,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Israel",
                 name: "Israel",
                 code: "IS1",
 
@@ -14807,6 +14898,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "China",
                 name: "China - 1",
                 code: "CH1",
 
@@ -14863,6 +14955,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "China",
                 name: "China - 2",
                 code: "CH1",
 
@@ -15800,6 +15893,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Lebanon",
                 name: "Lebanon",
                 code: "LBN",
 
@@ -15859,6 +15953,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Syria",
                 name: "Syria",
                 code: "SYR",
 
@@ -15982,6 +16077,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Israel",
                 name: "Israel",
                 code: "IS1",
 
@@ -16101,6 +16197,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Bhutan",
                 name: "Bhutan",
                 code: "BTN",
 
@@ -16168,6 +16265,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "South Korea",
                 name: "South Korea",
                 code: "KOR",
 
@@ -16259,6 +16357,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "North Korea",
                 name: "North Korea - 1",
                 code: "PRK",
 
@@ -16291,6 +16390,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "North Korea",
                 name: "North Korea - 1",
                 code: "PRK",
 
@@ -16483,6 +16583,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Uzbekistan",
                 name: "Uzbekistan",
                 code: "UZB",
 
@@ -16714,6 +16815,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Kazakhstan",
                 name: "Kazakhstan",
                 code: "KA1",
 
@@ -17177,6 +17279,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Oman",
                 name: "Oman - 1",
                 code: "OMN",
 
@@ -17357,6 +17460,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Oman",
                 name: "Oman - 2",
                 code: "OMN",
 
@@ -17396,6 +17500,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Tajikistan",
                 name: "Tajikistan",
                 code: "TJK",
 
@@ -17575,6 +17680,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Vietnam",
                 name: "Vietnam",
                 code: "VNM",
 
@@ -17766,6 +17872,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Cambodia",
                 name: "Cambodia",
                 code: "KHM",
 
@@ -17849,6 +17956,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Mongolia",
                 name: "Mongolia",
                 code: "MNG",
 
@@ -18164,6 +18272,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United Arab Emirates",
                 name: "United Arab Emirates",
                 code: "ARE",
 
@@ -18267,6 +18376,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Georgia",
                 name: "Georgia",
                 code: "GEO",
 
@@ -18378,6 +18488,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Azerbaijan",
                 name: "Azerbaijan - 1",
                 code: "AZE",
 
@@ -18534,6 +18645,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Azerbaijan",
                 name: "Azerbaijan - 2",
                 code: "AZE",
 
@@ -18586,6 +18698,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Laos",
                 name: "Laos",
                 code: "LAO",
 
@@ -18749,6 +18862,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Turkey",
                 name: "Turkey - 1",
                 code: "TUR",
 
@@ -18981,6 +19095,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Turkey",
                 name: "Turkey - 2",
                 code: "TUR",
 
@@ -19053,6 +19168,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Kyrgyzstan",
                 name: "Kyrgyzstan",
                 code: "KGZ",
 
@@ -19208,6 +19324,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Armenia",
                 name: "Armenia",
                 code: "ARM",
 
@@ -19303,6 +19420,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Qatar",
                 name: "Qatar",
                 code: "QAT",
 
@@ -19354,6 +19472,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Iran",
                 name: "Iran",
                 code: "IRN",
 
@@ -19673,6 +19792,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Iraq",
                 name: "Iraq",
                 code: "IRQ",
 
@@ -19808,6 +19928,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Saudi Arabia",
                 name: "Saudi Arabia",
                 code: "SAU",
 
@@ -20127,6 +20248,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Pakistan",
                 name: "Pakistan",
                 code: "PAK",
 
@@ -20406,6 +20528,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Thailand",
                 name: "Thailand",
                 code: "THA",
 
@@ -20677,6 +20800,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "East Timor",
                 name: "East Timor",
                 code: "TLS",
 
@@ -20736,6 +20860,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Kuwait",
                 name: "Kuwait",
                 code: "KWT",
 
@@ -20787,6 +20912,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Myanmar",
                 name: "Myanmar",
                 code: "MMR",
 
@@ -21082,6 +21208,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Brunei",
                 name: "Brunei",
                 code: "BRN",
 
@@ -21129,6 +21256,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Afghanistan",
                 name: "Afghanistan",
                 code: "AFG",
 
@@ -21420,6 +21548,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Bangladesh",
                 name: "Bangladesh",
                 code: "BGD",
 
@@ -21579,6 +21708,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Turkmenistan",
                 name: "Turkmenistan",
                 code: "TKM",
 
@@ -21810,6 +21940,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Jordan",
                 name: "Jordan",
                 code: "JOR",
 
@@ -21901,6 +22032,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Nepal",
                 name: "Nepal",
                 code: "NPL",
 
@@ -22008,6 +22140,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Yemen",
                 name: "Yemen",
                 code: "YEM",
 
@@ -22199,6 +22332,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Northern Cyprus",
                 name: "Northern Cyprus",
                 code: "CYN",
 
@@ -22278,6 +22412,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Philippines",
                 name: "Philippines - 1",
                 code: "PHL",
 
@@ -22318,6 +22453,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Philippines",
                 name: "Philippines - 2",
                 code: "PHL",
 
@@ -22381,6 +22517,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Philippines",
                 name: "Philippines - 3",
                 code: "PHL",
 
@@ -22504,6 +22641,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Philippines",
                 name: "Philippines - 3",
                 code: "PHL",
 
@@ -22555,6 +22693,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Philippines",
                 name: "Philippines - 4",
                 code: "PHL",
 
@@ -22702,6 +22841,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Philippines",
                 name: "Philippines - 5",
                 code: "PHL",
 
@@ -22753,6 +22893,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Philippines",
                 name: "Philippines - 6",
                 code: "PHL",
 
@@ -22825,6 +22966,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Sri Lanka",
                 name: "Sri Lanka",
                 code: "LKA",
 
@@ -22880,6 +23022,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Ethiopia",
                 name: "Ethiopia",
                 code: "ETH",
 
@@ -23131,6 +23274,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "South Sudan",
                 name: "South Sudan",
                 code: "SDS",
 
@@ -23398,6 +23542,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Somalia",
                 name: "Somalia",
                 code: "SOM",
 
@@ -23561,6 +23706,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Kenya",
                 name: "Kenya",
                 code: "KEN",
 
@@ -23724,6 +23870,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Malawi",
                 name: "Malawi",
                 code: "MWI",
 
@@ -23851,6 +23998,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United Republic of Tanzania",
                 name: "United Republic of Tanzania",
                 code: "TZA",
 
@@ -24074,6 +24222,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Somaliland",
                 name: "Somaliland",
                 code: "SOL",
 
@@ -24193,6 +24342,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Morocco",
                 name: "Morocco",
                 code: "MAR",
 
@@ -24460,6 +24610,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Western Sahara",
                 name: "Western Sahara",
                 code: "SAH",
 
@@ -24587,6 +24738,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Republic of the Congo",
                 name: "Republic of the Congo",
                 code: "COG",
 
@@ -24798,6 +24950,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Democratic Republic of the Congo",
                 name: "Democratic Republic of the Congo",
                 code: "COD",
 
@@ -25309,6 +25462,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Namibia",
                 name: "Namibia",
                 code: "NAM",
 
@@ -25500,6 +25654,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "South Africa",
                 name: "South Africa",
                 code: "ZAF",
 
@@ -25893,6 +26048,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Libya",
                 name: "Libya",
                 code: "LBY",
 
@@ -26132,6 +26288,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Tunisia",
                 name: "Tunisia",
                 code: "TUN",
 
@@ -26271,6 +26428,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Zambia",
                 name: "Zambia",
                 code: "ZMB",
 
@@ -26530,6 +26688,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Sierra Leone",
                 name: "Sierra Leone",
                 code: "SLE",
 
@@ -26633,6 +26792,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Guinea",
                 name: "Guinea",
                 code: "GIN",
 
@@ -26928,6 +27088,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Liberia",
                 name: "Liberia",
                 code: "LBR",
 
@@ -27051,6 +27212,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Central African Republic",
                 name: "Central African Republic",
                 code: "CAF",
 
@@ -27314,6 +27476,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Sudan",
                 name: "Sudan",
                 code: "SDN",
 
@@ -27653,6 +27816,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Djibouti",
                 name: "Djibouti",
                 code: "DJI",
 
@@ -27728,6 +27892,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Eritrea",
                 name: "Eritrea",
                 code: "ERI",
 
@@ -27855,6 +28020,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Ivory Coast",
                 name: "Ivory Coast",
                 code: "CIV",
 
@@ -28054,6 +28220,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Mali",
                 name: "Mali",
                 code: "MLI",
 
@@ -28373,6 +28540,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Senegal",
                 name: "Senegal",
                 code: "SEN",
 
@@ -28564,6 +28732,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Nigeria",
                 name: "Nigeria",
                 code: "NGA",
 
@@ -28811,6 +28980,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Benin",
                 name: "Benin",
                 code: "BEN",
 
@@ -28926,7 +29096,8 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "Angola - 1",
+                formattedName: "Angola",
+                name: "Angola",
                 code: "AGO",
 
             },
@@ -29206,7 +29377,8 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
-                name: "Angola - 2",
+                formattedName: "Angola",
+                name: "Angola",
                 code: "AGO",
 
             },
@@ -29257,6 +29429,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Botswana",
                 name: "Botswana",
                 code: "BWA",
 
@@ -29432,6 +29605,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Zimbabwe",
                 name: "Zimbabwe",
                 code: "ZWE",
 
@@ -29595,6 +29769,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Chad",
                 name: "Chad",
                 code: "TCD",
 
@@ -29842,6 +30017,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Algeria",
                 name: "Algeria",
                 code: "DZA",
 
@@ -30105,6 +30281,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Mozambique",
                 name: "Mozambique",
                 code: "MOZ",
 
@@ -30436,6 +30613,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "eSwatini",
                 name: "eSwatini",
                 code: "SWZ",
 
@@ -30495,6 +30673,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Burundi",
                 name: "Burundi",
                 code: "BDI",
 
@@ -30562,6 +30741,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Rwanda",
                 name: "Rwanda",
                 code: "RWA",
 
@@ -30633,6 +30813,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Uganda",
                 name: "Uganda",
                 code: "UGA",
 
@@ -30760,6 +30941,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Lesotho",
                 name: "Lesotho",
                 code: "LSO",
 
@@ -30823,6 +31005,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Cameroon",
                 name: "Cameroon",
                 code: "CMR",
 
@@ -31082,6 +31265,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Gabon",
                 name: "Gabon",
                 code: "GAB",
 
@@ -31221,6 +31405,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Niger",
                 name: "Niger",
                 code: "NER",
 
@@ -31468,6 +31653,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Burkina Faso",
                 name: "Burkina Faso",
                 code: "BFA",
 
@@ -31639,6 +31825,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Taiwan",
                 name: "Taiwan",
                 code: "TWN",
 
@@ -31690,6 +31877,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Japan",
                 name: "Japan - 1",
                 code: "JPN",
 
@@ -31854,6 +32042,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Japan",
                 name: "Japan - 2",
                 code: "JPN",
 
@@ -31934,6 +32123,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Japan",
                 name: "Japan - 3",
                 code: "JPN",
 
@@ -31999,6 +32189,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Togo",
                 name: "Togo",
                 code: "TGO",
 
@@ -32090,6 +32281,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Ghana",
                 name: "Ghana",
                 code: "GHA",
 
@@ -32205,6 +32397,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Guinea-Bissau",
                 name: "Guinea-Bissau",
                 code: "GNB",
 
@@ -32296,6 +32489,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Egypt",
                 name: "Egypt",
                 code: "EGY",
 
@@ -32487,6 +32681,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Mauritania",
                 name: "Mauritania",
                 code: "MRT",
 
@@ -32658,6 +32853,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Equatorial Guinea",
                 name: "Equatorial Guinea",
                 code: "GNQ",
 
@@ -32701,6 +32897,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Gambia",
                 name: "Gambia",
                 code: "GMB",
 
@@ -32780,6 +32977,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Madagascar",
                 name: "Madagascar",
                 code: "MDG",
 
@@ -32991,6 +33189,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Ukraine",
                 name: "Ukraine",
                 code: "UKR",
 
@@ -33378,6 +33577,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "France",
                 name: "France - French Guiana",
                 code: "FR1",
 
@@ -33470,6 +33670,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "France",
                 name: "France",
                 code: "FR1",
 
@@ -33678,6 +33879,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "France",
                 name: "France - 3",
                 code: "FR1",
 
@@ -33722,6 +33924,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Belarus",
                 name: "Belarus",
                 code: "BLR",
 
@@ -33917,6 +34120,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Lithuania",
                 name: "Lithuania",
                 code: "LTU",
 
@@ -34008,6 +34212,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 1",
                 code: "RUS",
 
@@ -34044,6 +34249,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 2",
                 code: "RUS",
 
@@ -35884,6 +36090,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 3",
                 code: "RUS",
 
@@ -35944,6 +36151,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 4",
                 code: "RUS",
 
@@ -35988,6 +36196,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 5",
                 code: "RUS",
 
@@ -36040,6 +36249,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 9",
                 code: "RUS",
 
@@ -36084,6 +36294,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 6",
                 code: "RUS",
 
@@ -36132,6 +36343,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 7",
                 code: "RUS",
 
@@ -36208,6 +36420,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 8",
                 code: "RUS",
 
@@ -36260,6 +36473,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 11",
                 code: "RUS",
 
@@ -36380,6 +36594,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 12",
                 code: "RUS",
 
@@ -36484,6 +36699,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 13",
                 code: "RUS",
 
@@ -36596,6 +36812,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 14",
                 code: "RUS",
 
@@ -36644,6 +36861,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Russia",
                 name: "Russia - 15",
                 code: "RUS",
 
@@ -36733,6 +36951,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Czechia",
                 name: "Czechia",
                 code: "CZE",
 
@@ -36888,6 +37107,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Germany",
                 name: "Germany",
                 code: "DEU",
 
@@ -37135,6 +37355,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Estonia",
                 name: "Estonia",
                 code: "EST",
 
@@ -37226,6 +37447,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Latvia",
                 name: "Latvia",
                 code: "LVA",
 
@@ -37329,6 +37551,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Norway",
                 name: "Norway - 1",
                 code: "NOR",
 
@@ -37417,6 +37640,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Norway",
                 name: "Norway - 2",
                 code: "NOR",
 
@@ -37632,6 +37856,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Norway",
                 name: "Norway - 3",
                 code: "NOR",
 
@@ -37695,6 +37920,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Norway",
                 name: "Norway - 4",
                 code: "NOR",
 
@@ -37743,6 +37969,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Sweden",
                 name: "Sweden",
                 code: "SWE",
 
@@ -37918,6 +38145,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Finland",
                 name: "Finland",
                 code: "FI1",
 
@@ -38093,6 +38321,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Luxembourg",
                 name: "Luxembourg",
                 code: "LUX",
 
@@ -38136,6 +38365,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Belgium",
                 name: "Belgium",
                 code: "BEL",
 
@@ -38219,6 +38449,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "North Macedonia",
                 name: "North Macedonia",
                 code: "MKD",
 
@@ -38306,6 +38537,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Albania",
                 name: "Albania",
                 code: "ALB",
 
@@ -38417,6 +38649,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Kosovo",
                 name: "Kosovo",
                 code: "KOS",
 
@@ -38516,6 +38749,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Spain",
                 name: "Spain",
                 code: "ESP",
 
@@ -38735,6 +38969,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Denmark",
                 name: "Denmark - 1",
                 code: "DN1",
 
@@ -38822,6 +39057,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Denmark",
                 name: "Denmark - 2",
                 code: "DN1",
 
@@ -38861,6 +39097,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Romania",
                 name: "Romania",
                 code: "ROU",
 
@@ -39052,6 +39289,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Hungary",
                 name: "Hungary",
                 code: "HUN",
 
@@ -39195,6 +39433,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Slovakia",
                 name: "Slovakia",
                 code: "SVK",
 
@@ -39342,6 +39581,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Poland",
                 name: "Poland",
                 code: "POL",
 
@@ -39537,6 +39777,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Ireland",
                 name: "Ireland",
                 code: "IRL",
 
@@ -39604,6 +39845,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United Kingdom",
                 name: "United Kingdom - Northern Ireland",
                 code: "GB1",
 
@@ -39652,6 +39894,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "United Kingdom",
                 name: "United Kingdom - England",
                 code: "GB1",
 
@@ -39860,6 +40103,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Greece",
                 name: "Greece",
                 code: "GRC",
 
@@ -39920,6 +40164,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Greece",
                 name: "Greece",
                 code: "GRC",
 
@@ -40109,6 +40354,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Austria",
                 name: "Austria",
                 code: "AUT",
 
@@ -40272,6 +40518,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Italy",
                 name: "Italy - 1",
                 code: "ITA",
 
@@ -40552,6 +40799,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Italy",
                 name: "Italy - 2",
                 code: "ITA",
 
@@ -40611,6 +40859,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Italy",
                 name: "Italy - 3",
                 code: "ITA",
 
@@ -40667,6 +40916,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Switzerland",
                 name: "Switzerland",
                 code: "CHE",
 
@@ -40778,6 +41028,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Netherlands",
                 name: "Netherlands",
                 code: "NL1",
 
@@ -40853,6 +41104,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Serbia",
                 name: "Republic of Serbia",
                 code: "SRB",
 
@@ -41060,6 +41312,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Croatia",
                 name: "Croatia",
                 code: "HRV",
 
@@ -41247,6 +41500,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Slovenia",
                 name: "Slovenia",
                 code: "SVN",
 
@@ -41334,6 +41588,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Bulgaria",
                 name: "Bulgaria",
                 code: "BGR",
 
@@ -41461,6 +41716,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Montenegro",
                 name: "Montenegro",
                 code: "MNE",
 
@@ -41548,6 +41804,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Bosnia and Herzegovina",
                 name: "Bosnia and Herzegovina",
                 code: "BIH",
 
@@ -41655,6 +41912,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Portugal",
                 name: "Portugal",
                 code: "PRT",
 
@@ -41802,6 +42060,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Moldova",
                 name: "Moldova",
                 code: "MDA",
 
@@ -41925,6 +42184,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Iceland",
                 name: "Iceland",
                 code: "ISL",
 
@@ -42020,6 +42280,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Papua New Guinea",
                 name: "Papua New Guinea",
                 code: "PNG",
 
@@ -42171,6 +42432,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Australia",
                 name: "Australia - 1",
                 code: "AU1",
 
@@ -42242,6 +42504,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Australia",
                 name: "Australia - 2",
                 code: "AU1",
 
@@ -42345,6 +42608,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Australia",
                 name: "Australia - 3",
                 code: "AU1",
 
@@ -42404,6 +42668,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Australia",
                 name: "Australia - 4",
                 code: "AU1",
 
@@ -42488,6 +42753,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Australia",
                 name: "Australia - 5",
                 code: "AU1",
 
@@ -43399,6 +43665,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Fiji",
                 name: "Fiji - 1",
                 code: "FJI",
 
@@ -43447,6 +43714,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Fiji",
                 name: "Fiji - 2",
                 code: "FJI",
 
@@ -43498,6 +43766,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Fiji",
                 name: "Fiji - 3",
                 code: "FJI",
 
@@ -43533,6 +43802,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "New Zealand",
                 name: "New Zealand - 1",
                 code: "NZ1",
             },
@@ -43691,6 +43961,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "New Zealand",
                 name: "New Zealand - 2",
                 code: "NZ1",
             },
@@ -43825,6 +44096,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Solomon Islands",
                 name: "Solomon Islands - 1",
                 code: "SLB",
 
@@ -43864,6 +44136,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Solomon Islands",
                 name: "Solomon Islands - 2",
                 code: "SLB",
 
@@ -43907,6 +44180,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Solomon Islands",
                 name: "Solomon Islands - 3",
                 code: "SLB",
 
@@ -43954,6 +44228,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Solomon Islands",
                 name: "Solomon Islands - 4",
                 code: "SLB",
 
@@ -44005,6 +44280,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Solomon Islands",
                 name: "Solomon Islands - 5",
                 code: "SLB",
 
@@ -44048,6 +44324,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Vanuatu",
                 name: "Vanuatu - 1",
                 code: "VUT",
 
@@ -44084,6 +44361,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Vanuatu",
                 name: "Vanuatu - 2",
                 code: "VUT",
 
@@ -44127,6 +44405,7 @@ const countriesData = {
         {
             type: "Feature",
             properties: {
+                formattedName: "Greenland",
                 name: "Greenland",
                 code: "GRL",
             },

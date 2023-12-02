@@ -12,26 +12,15 @@ const bounds = latLngBounds(southwestCorner, northeastCorner);
 
 function App() {
   const [clickedCountry, setClickedCountry] = useState(null);
-  const [formattedCountry, setFormattedCountry] = useState("");
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);  
 
   const handleCountryClick = (isClicked, country) => {
     if (isClicked) {
       setClickedCountry(null);
-      setFormattedCountry("");
       setSidebarIsOpen(false);
     } else { 
       setClickedCountry(country);
-      setFormattedCountry(country.properties.name);
-      
-      if (formattedCountry.includes(" - ")) {
-        const hypenIndex = formattedCountry.indexOf(' - ');
-        setFormattedCountry(formattedCountry.substring(0, hypenIndex));
-      }
-      if (formattedCountry.includes(' ')) {
-        formattedCountry.replace(' ', '-');
-      }
-      fetchCountryData(formattedCountry);
+      fetchCountryData(country.properties.formattedName);
       setSidebarIsOpen(true);
     }
   };
@@ -131,8 +120,8 @@ function App() {
             }}
           >
             <h2>Country Details</h2>
-            <p>Country Name: {formattedCountry} </p>
-            <p>Official Country Name: {formattedCountry} </p>
+            <p>Country Name: {clickedCountry?.properties?.name || ""} </p>
+            <p>Official Country Name: {clickedCountry?.properties?.name || ""} </p>
             <button onClick={handleSidebarClose}>Close Sidebar</button>
           </div>
         </MapContainer>
