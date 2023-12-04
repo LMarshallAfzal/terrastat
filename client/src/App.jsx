@@ -160,15 +160,105 @@ function App() {
                 <>
                   <h2>Social</h2>
                   <h3>Population Dynamics</h3>
-                  <p>Population: {countryIndicatorData?.length > 0 && countryIndicatorData[0][1][0]?.value || ""}</p>
-                  <p>Population growth: {countryIndicatorData?.length > 0 && countryIndicatorData[1][1][0]?.value || ""}</p>
-                  <p>Birth rate, crude: {countryIndicatorData?.length > 0 && countryIndicatorData[2][1][1]?.value || ""}</p>
-                  <p>Death rate, crude: {countryIndicatorData?.length > 0 && countryIndicatorData[3][1][1]?.value || ""}</p>
-                  <p>Fertility rate, total: {countryIndicatorData?.length > 0 && countryIndicatorData[4][1][1]?.value || ""}</p>
-                  <p>Life expectancy, male: {countryIndicatorData?.length > 0 && countryIndicatorData[5][1][1]?.value || ""}</p>
-                  <p>Life expectancy, female: {countryIndicatorData?.length > 0 && countryIndicatorData[6][1][1]?.value || ""}</p>
-                  <p>Age dependancy ratio, young: {countryIndicatorData?.length > 0 && countryIndicatorData[7][1][0]?.value || ""}</p>
-                  <p>Age dependancy ratio, old: {countryIndicatorData?.length > 0 && countryIndicatorData[8][1][0]?.value || ""}</p>
+                  <p>
+                    Population: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[0][1][0]?.value ||
+                          countryIndicatorData[0][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
+                  <p>
+                    Population growth: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[1][1][0]?.value ||
+                          countryIndicatorData[1][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
+                  <p>
+                    Birth rate, crude: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[2][1][0]?.value ||
+                          countryIndicatorData[2][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
+                  <p>
+                    Death rate, crude: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[3][1][0]?.value ||
+                          countryIndicatorData[3][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
+                  <p>
+                    Fertility rate, total: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[4][1][0]?.value ||
+                          countryIndicatorData[4][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
+                  <p>
+                    Life expectancy, male: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[5][1][0]?.value ||
+                          countryIndicatorData[5][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
+                  <p>
+                    Life expectancy, female: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[6][1][0]?.value ||
+                          countryIndicatorData[6][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
+                  <p>
+                    Age dependancy ratio, young: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[7][1][0]?.value ||
+                          countryIndicatorData[7][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
+                  <p>
+                    Age dependancy ratio, old: {
+                      countryIndicatorData?.length > 0
+                        ? (
+                          countryIndicatorData[8][1][0]?.value ||
+                          countryIndicatorData[8][1][1]?.value ||
+                          "No data available"
+                        )
+                        : "No data available"
+                    }
+                  </p>
                   <h3>Education</h3>
                   <h3>Labor</h3>
                   <h3>Health</h3>
