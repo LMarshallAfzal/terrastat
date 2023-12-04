@@ -2058,7 +2058,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -3006,7 +3006,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - Island 1",
-                code: "US5",
+                code: "USA",
 
             },
             geometry: {
@@ -3091,7 +3091,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - t",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -3143,7 +3143,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - g",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -3179,7 +3179,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - p",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -3231,7 +3231,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - x",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -3275,7 +3275,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - q",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -3319,7 +3319,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - l",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -3367,13 +3367,12 @@ const countriesData = {
 
             }
         },
-        // end of us island 7
         {
             type: "Feature",
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - Alaska",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -3949,7 +3948,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - Island 8",
-                code: "USAL",
+                code: "USA",
 
             },
             geometry: {
@@ -8648,7 +8647,7 @@ const countriesData = {
             properties: {
                 formattedName: "United States of America",
                 name: "United States of America - z",
-                code: "US1",
+                code: "USA",
 
             },
             geometry: {
@@ -12665,7 +12664,7 @@ const countriesData = {
             properties: {
                 formattedName: "United Kingdom",
                 name: "United Kingdom",
-                code: "GB1",
+                code: "GBR",
 
             },
             geometry: {
@@ -39847,7 +39846,7 @@ const countriesData = {
             properties: {
                 formattedName: "United Kingdom",
                 name: "United Kingdom - Northern Ireland",
-                code: "GB1",
+                code: "GBR",
 
             },
             geometry: {
@@ -39896,7 +39895,7 @@ const countriesData = {
             properties: {
                 formattedName: "United Kingdom",
                 name: "United Kingdom - England",
-                code: "GB1",
+                code: "GBR",
 
             },
             geometry: {
@@ -42434,7 +42433,7 @@ const countriesData = {
             properties: {
                 formattedName: "Australia",
                 name: "Australia - 1",
-                code: "AU1",
+                code: "AUS",
 
             },
             geometry: {
@@ -42506,7 +42505,7 @@ const countriesData = {
             properties: {
                 formattedName: "Australia",
                 name: "Australia - 2",
-                code: "AU1",
+                code: "AUS",
 
             },
             geometry: {
@@ -42610,7 +42609,7 @@ const countriesData = {
             properties: {
                 formattedName: "Australia",
                 name: "Australia - 3",
-                code: "AU1",
+                code: "AUS",
 
             },
             geometry: {
@@ -42670,7 +42669,7 @@ const countriesData = {
             properties: {
                 formattedName: "Australia",
                 name: "Australia - 4",
-                code: "AU1",
+                code: "AUS",
 
             },
             geometry: {
@@ -42755,7 +42754,7 @@ const countriesData = {
             properties: {
                 formattedName: "Australia",
                 name: "Australia - 5",
-                code: "AU1",
+                code: "AUS",
 
             },
             geometry: {
