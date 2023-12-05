@@ -75,6 +75,13 @@ function App() {
       "SL.EMP.TOTL.SP.ZS",
       "SL.UEM.TOTL.ZS",
       "SL.TLF.0714.ZS",
+      "SH.STA.STNT.ZS",
+      "SH.STA.MMRT",
+      "SH.DYN.MORT",
+      "SH.HIV.INCD.ZS",
+      "SH.DYN.NCOM.ZS",
+      "SH.STA.TRAF.P5",
+      "SP.ADO.TFRT",
     ];
 
     const promises = indicators.map((indicator) => {
