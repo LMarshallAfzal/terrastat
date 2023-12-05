@@ -68,6 +68,13 @@ function App() {
       "SE.SEC.PROG.ZS",
       "SE.PRM.CMPT.ZS",
       "SE.ADT.1524.LT.ZS",
+      "SL.TLF.CACT.ZS",
+      "SL.IND.EMPL.ZS",
+      "SL.AGR.EMPL.ZS",
+      "SL.SRV.EMPL.ZS",
+      "SL.EMP.TOTL.SP.ZS",
+      "SL.UEM.TOTL.ZS",
+      "SL.TLF.0714.ZS",
     ];
 
     const promises = indicators.map((indicator) => {

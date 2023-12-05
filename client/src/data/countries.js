@@ -33578,7 +33578,7 @@ const countriesData = {
             properties: {
                 formattedName: "France",
                 name: "France - French Guiana",
-                code: "FR1",
+                code: "GUF",
 
             },
             geometry: {
@@ -33671,7 +33671,7 @@ const countriesData = {
             properties: {
                 formattedName: "France",
                 name: "France",
-                code: "FR1",
+                code: "FRA",
 
             },
             geometry: {
@@ -33880,7 +33880,7 @@ const countriesData = {
             properties: {
                 formattedName: "France",
                 name: "France - 3",
-                code: "FR1",
+                code: "FRA",
 
             },
             geometry: {
