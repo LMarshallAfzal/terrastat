@@ -6,7 +6,6 @@
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333333;
-  /* opacity: 0.8; */
   width: 400px;
   height: 100vh;
   border: 1px solid #ccc;
@@ -14,21 +13,46 @@
   transition: right 0.5s ease-in-out;
 }
 
-.sidebar h2 {
-  font-size: 20px;
-  opacity: 1;
-}
-
-.sidebar p {
-  padding-left: 5%;
-  opacity: 1;
-  text-align: start;
-}
-
 .sidebar .indicator-container {
+  display: flex;
+  flex-direction: column;
   width: 350px;
   background-color: #fff;
   padding: 10px;
   border-radius: 10px;
   margin: 0 auto 10px;
+}
+
+.indicator-container h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.indicator-container p {
+  margin-bottom: 5px;
+}
+
+.indicator-container .stat-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.indicator-container .stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stats .stat-label {
+  font-weight: bold;
+  width: 100%;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.stats .stat-value {
+  width: 100%;
+  font-size: medium;
+  padding-bottom: 5px;
 }
