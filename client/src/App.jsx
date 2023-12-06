@@ -82,6 +82,10 @@ function App() {
       "SH.DYN.NCOM.ZS",
       "SH.STA.TRAF.P5",
       "SP.ADO.TFRT",
+      "SE.ENR.PRSC.FM.ZS",
+      "SL.TLF.CACT.FM.ZS",
+      "SL.EMP.SMGT.FE.ZS",
+      "SG.GEN.PARL.ZS",
     ];
 
     const promises = indicators.map((indicator) => {
