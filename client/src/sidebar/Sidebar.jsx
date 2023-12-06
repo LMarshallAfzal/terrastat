@@ -1,9 +1,20 @@
+import { useState } from "react";
 import "./Sidebar.css";
 import PopulationDynamics from "./peopleStats/PopulationDynamics";
 import Education from "./peopleStats/Education";
 import Labor from "./peopleStats/Labor";
 import Health from "./peopleStats/Health";
-
+import Agriculture from "./environmentStats/Agriculture";
+import Climate from "./environmentStats/Climate";
+import EnergyMining from "./environmentStats/Energy&mining";
+import Environment from "./environmentStats/Environment";
+import UrbanRuralDevelopment from "./environmentStats/Urban&RuralDevelopment";
+import WaterSanitation from "./environmentStats/Water&Sanitation";
+import GrowthEconomicStructure from "./economyStats/Growth&EconomicStructure";
+import IncomeSavings from "./economyStats/Income&Savings";
+import BalanceOfPayments from "./economyStats/BalanceOfPayments";
+import PricesTermsOfTrade from "./economyStats/Prices&TermsOfTrade";
+import LaborProductivity from "./economyStats/Labor&Productivity";
 
 const Sidebar = ({
   countryData,
@@ -12,13 +23,14 @@ const Sidebar = ({
   clickedCountry,
   sidebarIsOpen,
 }) => {
+  const [activeIndicator, setActiveIndicator] = useState("people");
+
   const buttons = [
-    { label: "Button 1" },
-    { label: "Button 2" },
-    { label: "Button 3" },
-    { label: "Button 4" },
-    { label: "Button 5" },
-    { label: "Button 6" },
+    { label: "People" },
+    { label: "Environment" },
+    { label: "Economy" },
+    { label: "States & Markets" },
+    { label: "Global Links" },
   ];
 
   const formatPopulation = (population) => {
@@ -49,6 +61,31 @@ const Sidebar = ({
     }
   };
 
+  const handleButtonClick = (buttonIndex) => {
+    let newActiveIndicator = "";
+
+    switch (buttonIndex) {
+      case 0:
+        newActiveIndicator = "people";
+        break;
+      case 1:
+        newActiveIndicator = "environment";
+        break;
+      case 2:
+        newActiveIndicator = "economy";
+        break;
+      case 3:
+        newActiveIndicator = "states & markets";
+        break;
+      case 4:
+        newActiveIndicator = "global links";
+        break;
+      default:
+        break;
+    }
+    setActiveIndicator(newActiveIndicator);
+  };
+
   return (
     <div
       className="sidebar"
@@ -61,30 +98,63 @@ const Sidebar = ({
       </div>
       <div className="button-row">
         {buttons?.map((button, index) => (
-          <button className="indicator-group-button" key={index}>{button.label}</button>
+          <button
+            className={
+              activeIndicator === button.label.toLowerCase()
+                ? "indicator-group-button clicked-button"
+                : "indicator-group-button"
+            }
+            key={index}
+            onClick={() => handleButtonClick(index)}
+          >
+            {button.label}
+          </button>
         ))}
       </div>
       {clickedCountry && (
         <>
-          <PopulationDynamics
-            countryIndicatorData={countryIndicatorData}
-            formatPopulation={formatPopulation}
-            formatRate={formatRate}
-            formatPercentage={formatPercentage}
-          />
-          <Education
-            countryIndicatorData={countryIndicatorData}
-            formatPercentage={formatPercentage}
-          />
-          <Labor
-            countryIndicatorData={countryIndicatorData}
-            formatPercentage={formatPercentage}
-          />
-          <Health
-            countryIndicatorData={countryIndicatorData}
-            formatPercentage={formatPercentage}
-            formatRate={formatRate}
-          />
+          {activeIndicator === "people" && (
+            <>
+              <PopulationDynamics
+                countryIndicatorData={countryIndicatorData}
+                formatPopulation={formatPopulation}
+                formatRate={formatRate}
+                formatPercentage={formatPercentage}
+              />
+              <Education
+                countryIndicatorData={countryIndicatorData}
+                formatPercentage={formatPercentage}
+              />
+              <Labor
+                countryIndicatorData={countryIndicatorData}
+                formatPercentage={formatPercentage}
+              />
+              <Health
+                countryIndicatorData={countryIndicatorData}
+                formatPercentage={formatPercentage}
+                formatRate={formatRate}
+              />
+            </>
+          )}
+          {activeIndicator === "environment" && (
+            <>
+              <Agriculture />
+              <Climate />
+              <EnergyMining />
+              <Environment />
+              <UrbanRuralDevelopment />
+              <WaterSanitation />
+            </>
+          )}
+          {activeIndicator === "economy" && (
+            <>
+              <GrowthEconomicStructure />
+              <IncomeSavings />
+              <BalanceOfPayments />
+              <PricesTermsOfTrade />
+              <LaborProductivity />
+            </>
+          )}
         </>
       )}
       <button onClick={handleSidebarClose}>Close Sidebar</button>

@@ -35,6 +35,10 @@
   margin: 2px;
 }
 
+.sidebar .clicked-button {
+  background-color: #838587;
+}
+
 .indicator-container h2 {
   font-size: 20px;
   margin: 0 0 10px;
