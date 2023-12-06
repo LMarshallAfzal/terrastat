@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import "./Sidebar.css";
-import PopulationDynamics from "./peopleStats/PopulationDynamics";
-import Education from "./peopleStats/Education";
-import Labor from "./peopleStats/Labor";
-import Health from "./peopleStats/Health";
+const LazyPopulationDynamics = lazy(() =>
+  import("./peopleStats/PopulationDynamics")
+);
+const LazyEducation = lazy(() => import("./peopleStats/Education"));
+const LazyLabor = lazy(() => import("./peopleStats/Labor"));
+const LazyHealth = lazy(() => import("./peopleStats/Health"));
 import Agriculture from "./environmentStats/Agriculture";
 import Climate from "./environmentStats/Climate";
 import EnergyMining from "./environmentStats/Energy&mining";
@@ -115,25 +117,33 @@ const Sidebar = ({
         <>
           {activeIndicator === "people" && (
             <>
-              <PopulationDynamics
-                countryIndicatorData={countryIndicatorData}
-                formatPopulation={formatPopulation}
-                formatRate={formatRate}
-                formatPercentage={formatPercentage}
-              />
-              <Education
-                countryIndicatorData={countryIndicatorData}
-                formatPercentage={formatPercentage}
-              />
-              <Labor
-                countryIndicatorData={countryIndicatorData}
-                formatPercentage={formatPercentage}
-              />
-              <Health
-                countryIndicatorData={countryIndicatorData}
-                formatPercentage={formatPercentage}
-                formatRate={formatRate}
-              />
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyPopulationDynamics
+                  countryIndicatorData={countryIndicatorData}
+                  formatPopulation={formatPopulation}
+                  formatRate={formatRate}
+                  formatPercentage={formatPercentage}
+                />
+              </Suspense>
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyEducation
+                  countryIndicatorData={countryIndicatorData}
+                  formatPercentage={formatPercentage}
+                />
+              </Suspense>
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyLabor
+                  countryIndicatorData={countryIndicatorData}
+                  formatPercentage={formatPercentage}
+                />
+              </Suspense>
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyHealth
+                  countryIndicatorData={countryIndicatorData}
+                  formatPercentage={formatPercentage}
+                  formatRate={formatRate}
+                />
+              </Suspense>
             </>
           )}
           {activeIndicator === "environment" && (
