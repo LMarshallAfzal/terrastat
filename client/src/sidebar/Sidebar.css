@@ -25,6 +25,16 @@
   margin: 0 auto 10px;
 }
 
+.sidebar .button-row {
+  width: 350px;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+}
+
+.sidebar .indicator-group-button {
+  margin: 2px;
+}
+
 .indicator-container h2 {
   font-size: 20px;
   margin: 0 0 10px;

@@ -1,8 +1,8 @@
 import "./Sidebar.css";
-import PopulationDynamics from "./PopulationDynamics";
-import Education from "./Education";
-import Labor from "./Labor";
-import Health from "./Health";
+import PopulationDynamics from "./peopleStats/PopulationDynamics";
+import Education from "./peopleStats/Education";
+import Labor from "./peopleStats/Labor";
+import Health from "./peopleStats/Health";
 
 
 const Sidebar = ({
@@ -12,6 +12,15 @@ const Sidebar = ({
   clickedCountry,
   sidebarIsOpen,
 }) => {
+  const buttons = [
+    { label: "Button 1" },
+    { label: "Button 2" },
+    { label: "Button 3" },
+    { label: "Button 4" },
+    { label: "Button 5" },
+    { label: "Button 6" },
+  ];
+
   const formatPopulation = (population) => {
     if (population < 1000) {
       return population.toLocaleString();
@@ -49,6 +58,11 @@ const Sidebar = ({
     >
       <div className="country indicator-container">
         <h2>{(countryData?.length > 0 && countryData[1][0]?.name) || ""}</h2>
+      </div>
+      <div className="button-row">
+        {buttons?.map((button, index) => (
+          <button className="indicator-group-button" key={index}>{button.label}</button>
+        ))}
       </div>
       {clickedCountry && (
         <>

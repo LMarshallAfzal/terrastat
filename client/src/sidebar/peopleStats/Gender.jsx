@@ -1,4 +1,4 @@
-import "./Sidebar.css";
+import "../Sidebar.css";
 
 const Labor = ({ countryIndicatorData, formatPercentage, formatRate }) => {
   return (

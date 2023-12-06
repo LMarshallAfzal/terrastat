@@ -3,7 +3,7 @@ import "./App.css";
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/leaflet";
 import countriesData from "./data/countries.js";
-import Sidebar from "./Sidebar";
+import Sidebar from "./sidebar/Sidebar.jsx";
 import { latLng, latLngBounds } from "leaflet";
 import { MapContainer, TileLayer, Polygon } from "react-leaflet";
 
