@@ -118,6 +118,11 @@ const useCountryData = () => {
       "EN.ATM.PM25.MC.M3",
       "EN.ATM.PM25.MC.ZS",
       // Energy & Mining
+      "EG.EGY.PRIM.PP.KD",
+      "EG.FEC.RNEW.ZS",
+      "EG.ELC.RNEW.ZS",
+      "EG.ELC.ACCS.ZS",
+      "EG.CFT.ACCS.ZS",
     ];
 
     const promises = indicators.map((indicator) => {

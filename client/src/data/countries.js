@@ -1514,7 +1514,7 @@ const countriesData = {
         //     properties: {
         // formattedName: "Denmark",//         
         // name: "Denmark",
-        //         code: "DN1",
+        //         code: "DNK",
 
         //     },
         //     geometry: {
@@ -38970,7 +38970,7 @@ const countriesData = {
             properties: {
                 formattedName: "Denmark",
                 name: "Denmark - 1",
-                code: "DN1",
+                code: "DNK",
 
             },
             geometry: {
@@ -39058,7 +39058,7 @@ const countriesData = {
             properties: {
                 formattedName: "Denmark",
                 name: "Denmark - 2",
-                code: "DN1",
+                code: "DNK",
 
             },
             geometry: {

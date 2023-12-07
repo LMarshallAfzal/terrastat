@@ -7,7 +7,7 @@ const LazyEducation = lazy(() => import("./peopleStats/Education"));
 const LazyLabor = lazy(() => import("./peopleStats/Labor"));
 const LazyHealth = lazy(() => import("./peopleStats/Health"));
 const LazyAgriculture = lazy(() => import("./environmentStats/Agriculture"));
-import Climate from "./environmentStats/Climate";
+const LazyClimate = lazy(() => import("./environmentStats/Climate"));
 import EnergyMining from "./environmentStats/Energy&mining";
 import Environment from "./environmentStats/Environment";
 import UrbanRuralDevelopment from "./environmentStats/Urban&RuralDevelopment";
@@ -191,12 +191,20 @@ const Sidebar = ({
                   formatValue={formatValue}
                 />
               </Suspense>
-              <Climate 
+              <Suspense fallback={<p>Loading...</p>}>
+              <LazyClimate 
                 environmentIndicatorData={environmentIndicatorData}
                 formatPercentage={formatPercentage}
                 formatRate={formatRate}
               />
-              <EnergyMining />
+              </Suspense>
+              <Suspense fallback={<p>Loading...</p>}>
+              <EnergyMining 
+                environmentIndicatorData={environmentIndicatorData}
+                formatPercentage={formatPercentage}
+                formatRate={formatRate}
+              />
+              </Suspense>
               <Environment />
               <UrbanRuralDevelopment />
               <WaterSanitation />
