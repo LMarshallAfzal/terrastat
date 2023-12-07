@@ -3,7 +3,7 @@ import "../Sidebar.css";
 const GrowthEconomicStructure = ({
   economicIndicatorData,
   formatPercentage,
-  formatGDP
+  formatPrice
 }) => {
   return (
     <div className="growth-economic-structure indicator-container">
@@ -13,7 +13,7 @@ const GrowthEconomicStructure = ({
           <div className="stat-label">GDP</div>
           <div className="stat-value">
             {economicIndicatorData?.length > 0
-              ? formatGDP(
+              ? formatPrice(
                   economicIndicatorData[0][1][0]?.value ||
                     economicIndicatorData[0][1][1]?.value ||
                     0

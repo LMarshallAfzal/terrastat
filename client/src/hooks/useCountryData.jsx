@@ -58,6 +58,7 @@ const useCountryData = () => {
 
   const fetchEconomicIndicatorData = async (countryCode) => {
     const indicators = [
+      // Growth & economic structure
       "NY.GDP.MKTP.CD",
       "NY.GDP.MKTP.KD.ZG",
       "NV.AGR.TOTL.KD.ZG",
@@ -75,6 +76,11 @@ const useCountryData = () => {
       "NE.GDI.TOTL.ZS",
       "NE.EXP.GNFS.ZS",
       "NE.IMP.GNFS.ZS",
+      // Income & savings
+      "NY.GNP.PCAP.CD",
+      "NY.GNP.PCAP.PP.CD",
+      "NY.GNS.ICTR.ZS",
+      "NY.ADJ.SVNG.GN.ZS",
     ];
 
     const promises = indicators.map((indicator) => {

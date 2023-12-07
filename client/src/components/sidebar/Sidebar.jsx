@@ -15,7 +15,7 @@ import WaterSanitation from "./environmentStats/Water&Sanitation";
 const LazyGrowthEconomicStructure = lazy(() =>
   import("./economyStats/Growth&EconomicStructure")
 );
-import IncomeSavings from "./economyStats/Income&Savings";
+const LazyIncomeSavings = lazy(() => import("./economyStats/Income&Savings"));
 import BalanceOfPayments from "./economyStats/BalanceOfPayments";
 import PricesTermsOfTrade from "./economyStats/Prices&TermsOfTrade";
 import LaborProductivity from "./economyStats/Labor&Productivity";
@@ -50,20 +50,19 @@ const Sidebar = ({
     }
   };
 
-  const formatGDP = (gdp) => {
-    if (gdp < 1000) {
-      return gdp.toLocaleString(undefined, { maximumFractionDigits: 2 });
-    } else if (gdp < 1000000) {
-      return `${(gdp / 1000).toFixed(2)}k`;
-    } else if (gdp < 1000000000) {
-      return `${(gdp / 1000000).toFixed(2)}m`;
-    } else if (gdp < 1000000000000) {
-      return `${(gdp / 1000000000).toFixed(2)}b`;
+  const formatPrice = (value) => {
+    if (value < 1000) {
+      return value.toLocaleString(undefined, { maximumFractionDigits: 2 });
+    } else if (value < 1000000) {
+      return `US$${(value / 1000).toFixed(2)}k`;
+    } else if (value < 1000000000) {
+      return `US$${(value / 1000000).toFixed(2)}m`;
+    } else if (value < 1000000000000) {
+      return `US$${(value / 1000000000).toFixed(2)}b`;
     } else {
-      return `${(gdp / 1000000000000).toFixed(2)}t`;
+      return `US$${(value / 1000000000000).toFixed(2)}t`;
     }
   };
-  
 
   const formatRate = (value) => {
     if (value === 0 || value === null || value === undefined) {
@@ -180,10 +179,16 @@ const Sidebar = ({
                 <LazyGrowthEconomicStructure
                   economicIndicatorData={economicIndicatorData}
                   formatPercentage={formatPercentage}
-                  formatGDP={formatGDP}
+                  formatPrice={formatPrice}
                 />
               </Suspense>
-              <IncomeSavings />
+              <Suspense fallback={<p>Loading...</p>}>
+              <LazyIncomeSavings 
+                economicIndicatorData={economicIndicatorData}
+                formatPercentage={formatPercentage}
+                formatPrice={formatPrice}
+              />
+              </Suspense>
               <BalanceOfPayments />
               <PricesTermsOfTrade />
               <LaborProductivity />
