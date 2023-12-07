@@ -13,11 +13,12 @@ const northeastCorner = latLng([85.0511, 180]);
 const bounds = latLngBounds(southwestCorner, northeastCorner);
 
 function App() {
-  const { fetchCountryData, fetchPeopleIndicatorData, fetchEconomicIndicatorData } = useCountryData();
+  const { fetchCountryData, fetchPeopleIndicatorData, fetchEconomicIndicatorData, fetchEnvironmentIndicatorData } = useCountryData();
 
   const [clickedCountry, setClickedCountry] = useState(null);
   const [countryData, setCountryData] = useState([]);
   const [peopleIndicatorData, setPeopleIndicatorData] = useState([]);
+  const [environmentIndicatorData, setEnvironmentIndicatorData] = useState([]);
   const [economicIndicatorData, setEconomicIndicatorData] = useState([]);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
@@ -31,8 +32,10 @@ function App() {
       setCountryData(countryData);
       setPeopleIndicatorData(await fetchPeopleIndicatorData(country.properties.code));
       setEconomicIndicatorData(await fetchEconomicIndicatorData(country.properties.code));
+      setEnvironmentIndicatorData(await fetchEnvironmentIndicatorData(country.properties.code));
+
       setSidebarIsOpen(true);
-      console.log(economicIndicatorData);
+      console.log(environmentIndicatorData);
     }
   };
 
@@ -108,6 +111,7 @@ function App() {
           <Sidebar
             countryData={countryData}
             peopleIndicatorData={peopleIndicatorData}
+            environmentIndicatorData={environmentIndicatorData}
             economicIndicatorData={economicIndicatorData}
             handleSidebarClose={handleSidebarClose}
             clickedCountry={clickedCountry}

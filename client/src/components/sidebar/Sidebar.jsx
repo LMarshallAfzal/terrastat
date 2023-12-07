@@ -6,7 +6,7 @@ const LazyPopulationDynamics = lazy(() =>
 const LazyEducation = lazy(() => import("./peopleStats/Education"));
 const LazyLabor = lazy(() => import("./peopleStats/Labor"));
 const LazyHealth = lazy(() => import("./peopleStats/Health"));
-import Agriculture from "./environmentStats/Agriculture";
+const LazyAgriculture = lazy(() => import("./environmentStats/Agriculture"));
 import Climate from "./environmentStats/Climate";
 import EnergyMining from "./environmentStats/Energy&mining";
 import Environment from "./environmentStats/Environment";
@@ -29,6 +29,7 @@ const LazyLaborProductivity = lazy(() =>
 const Sidebar = ({
   countryData,
   peopleIndicatorData,
+  environmentIndicatorData,
   economicIndicatorData,
   handleSidebarClose,
   clickedCountry,
@@ -87,6 +88,14 @@ const Sidebar = ({
       return "---";
     } else {
       return value.toFixed(2) + "%";
+    }
+  };
+
+  const formatValue = (value, unit) => {
+    if (value === 0 || value === null || value === undefined) {
+      return "---";
+    } else {
+      return value + unit;
     }
   };
 
@@ -175,7 +184,13 @@ const Sidebar = ({
           )}
           {activeIndicator === "environment" && (
             <>
-              <Agriculture />
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyAgriculture
+                  environmentIndicatorData={environmentIndicatorData}
+                  formatPercentage={formatPercentage}
+                  formatValue={formatValue}
+                />
+              </Suspense>
               <Climate />
               <EnergyMining />
               <Environment />

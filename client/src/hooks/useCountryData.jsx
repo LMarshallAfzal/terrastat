@@ -107,9 +107,28 @@ const useCountryData = () => {
     return data;
   };
 
+  const fetchEnvironmentIndicatorData = async (countryCode) => {
+    const indicators = [
+      // Agriculture
+      "AG.LND.AGRI.ZS",
+      "AG.LND.CREL.HA",
+      "AG.YLD.CREL.KG",
+      // Climate
+    ];
+
+    const promises = indicators.map((indicator) => {
+      const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
+      return fetch(url).then((response) => response.json());
+    });
+
+    const data = await Promise.all(promises);
+    return data;
+  };
+
   return {
     fetchCountryData,
     fetchPeopleIndicatorData,
+    fetchEnvironmentIndicatorData,
     fetchEconomicIndicatorData,
   };
 };
