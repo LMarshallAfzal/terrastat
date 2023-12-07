@@ -87,6 +87,9 @@ const useCountryData = () => {
       "BX.TRF.PWKR.DT.GD.ZS",
       "BN.CAB.XOKA.GD.ZS",
       "BX.KLT.DINV.WD.GD.ZS",
+      // Prices and terms of trade
+      "FP.CPI.TOTL",
+      "TT.PRI.MRCH.XD.WD",
     ];
 
     const promises = indicators.map((indicator) => {
