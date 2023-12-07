@@ -191,7 +191,11 @@ const Sidebar = ({
                   formatValue={formatValue}
                 />
               </Suspense>
-              <Climate />
+              <Climate 
+                environmentIndicatorData={environmentIndicatorData}
+                formatPercentage={formatPercentage}
+                formatRate={formatRate}
+              />
               <EnergyMining />
               <Environment />
               <UrbanRuralDevelopment />

@@ -37,7 +37,7 @@ const Agriculture = ({
       </div>
       <div className="stat-row">
         <div className="stats">
-          <div className="stat-label">Cereal yield (kg per hectare)</div>
+          <div className="stat-label">Cereal yield (kg/ha)</div>
           <div className="stat-value">
             {environmentIndicatorData?.length > 0
               ? formatValue(

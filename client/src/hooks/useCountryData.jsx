@@ -114,6 +114,10 @@ const useCountryData = () => {
       "AG.LND.CREL.HA",
       "AG.YLD.CREL.KG",
       // Climate
+      "EN.ATM.CO2E.PC",
+      "EN.ATM.PM25.MC.M3",
+      "EN.ATM.PM25.MC.ZS",
+      // Energy & Mining
     ];
 
     const promises = indicators.map((indicator) => {
