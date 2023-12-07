@@ -16,9 +16,15 @@ const LazyGrowthEconomicStructure = lazy(() =>
   import("./economyStats/Growth&EconomicStructure")
 );
 const LazyIncomeSavings = lazy(() => import("./economyStats/Income&Savings"));
-const LazyBalanceOfPayments = lazy(() => import("./economyStats/BalanceOfPayments"));
-const LazyPricesTermsOfTrade = lazy(() => import("./economyStats/Prices&TermsOfTrade"));
-const LazyLaborProductivity = lazy(() => import("./economyStats/Labor&Productivity"));
+const LazyBalanceOfPayments = lazy(() =>
+  import("./economyStats/BalanceOfPayments")
+);
+const LazyPricesTermsOfTrade = lazy(() =>
+  import("./economyStats/Prices&TermsOfTrade")
+);
+const LazyLaborProductivity = lazy(() =>
+  import("./economyStats/Labor&Productivity")
+);
 
 const Sidebar = ({
   countryData,
@@ -51,16 +57,20 @@ const Sidebar = ({
   };
 
   const formatPrice = (value) => {
-    if (value < 1000) {
-      return value.toLocaleString(undefined, { maximumFractionDigits: 2 });
-    } else if (value < 1000000) {
-      return `US$${(value / 1000).toFixed(2)}k`;
-    } else if (value < 1000000000) {
-      return `US$${(value / 1000000).toFixed(2)}m`;
-    } else if (value < 1000000000000) {
-      return `US$${(value / 1000000000).toFixed(2)}b`;
+    if (value === 0 || value === null || value === undefined) {
+      return "---";
     } else {
-      return `US$${(value / 1000000000000).toFixed(2)}t`;
+      if (value < 1000) {
+        return `US$${value.toFixed(2)}`;
+      } else if (value < 1000000) {
+        return `US$${(value / 1000).toFixed(2)}k`;
+      } else if (value < 1000000000) {
+        return `US$${(value / 1000000).toFixed(2)}m`;
+      } else if (value < 1000000000000) {
+        return `US$${(value / 1000000000).toFixed(2)}b`;
+      } else {
+        return `US$${(value / 1000000000000).toFixed(2)}t`;
+      }
     }
   };
 
@@ -183,30 +193,31 @@ const Sidebar = ({
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
-              <LazyIncomeSavings 
-                economicIndicatorData={economicIndicatorData}
-                formatPercentage={formatPercentage}
-                formatPrice={formatPrice}
-              />
+                <LazyIncomeSavings
+                  economicIndicatorData={economicIndicatorData}
+                  formatPercentage={formatPercentage}
+                  formatPrice={formatPrice}
+                />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
-              <LazyBalanceOfPayments 
-                economicIndicatorData={economicIndicatorData}
-                formatPercentage={formatPercentage}
-                formatRate={formatRate}
-              />
+                <LazyBalanceOfPayments
+                  economicIndicatorData={economicIndicatorData}
+                  formatPercentage={formatPercentage}
+                  formatRate={formatRate}
+                />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
-                <LazyPricesTermsOfTrade 
+                <LazyPricesTermsOfTrade
                   economicIndicatorData={economicIndicatorData}
                   formatRate={formatRate}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
-              <LazyLaborProductivity
-                economicIndicatorData={economicIndicatorData}
-                formatPrice={formatPrice}
-              />
+                <LazyLaborProductivity
+                  economicIndicatorData={economicIndicatorData}
+                  formatPrice={formatPrice}
+                  formatPercentage={formatPercentage}
+                />
               </Suspense>
             </>
           )}

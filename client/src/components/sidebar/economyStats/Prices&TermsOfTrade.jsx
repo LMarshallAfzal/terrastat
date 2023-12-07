@@ -13,8 +13,8 @@ const PricesTermsOfTrade = ({
           <div className="stat-value">
             {economicIndicatorData?.length > 0
               ? formatRate(
-                  economicIndicatorData[25][1][0]?.value ||
-                    economicIndicatorData[25][1][1]?.value ||
+                  economicIndicatorData[26][1][0]?.value ||
+                    economicIndicatorData[26][1][1]?.value ||
                     0
                 )
               : "---"}
@@ -25,8 +25,8 @@ const PricesTermsOfTrade = ({
           <div className="stat-value">
             {economicIndicatorData?.length > 0
               ? formatRate(
-                  economicIndicatorData[26][1][0]?.value ||
-                    economicIndicatorData[26][1][0]?.value ||
+                  economicIndicatorData[27][1][0]?.value ||
+                    economicIndicatorData[27][1][0]?.value ||
                     0
                 )
               : "---"}

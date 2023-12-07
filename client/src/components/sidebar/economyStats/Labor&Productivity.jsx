@@ -14,8 +14,8 @@ const LaborProductivity = ({
           <div className="stat-value">
             {economicIndicatorData?.length > 0
               ? formatPrice(
-                  economicIndicatorData[27][1][0]?.value ||
-                    economicIndicatorData[27][1][1]?.value ||
+                  economicIndicatorData[28][1][0]?.value ||
+                    economicIndicatorData[28][1][1]?.value ||
                     0
                 )
               : "---"}
@@ -26,8 +26,8 @@ const LaborProductivity = ({
           <div className="stat-value">
             {economicIndicatorData?.length > 0
               ? formatPercentage(
-                  economicIndicatorData[28][1][0]?.value ||
-                    economicIndicatorData[28][1][0]?.value ||
+                  economicIndicatorData[29][1][0]?.value ||
+                    economicIndicatorData[29][1][0]?.value ||
                     0
                 )
               : "---"}
@@ -40,8 +40,8 @@ const LaborProductivity = ({
           <div className="stat-value">
             {economicIndicatorData?.length > 0
               ? formatPrice(
-                  economicIndicatorData[29][1][0]?.value ||
-                    economicIndicatorData[29][1][1]?.value ||
+                  economicIndicatorData[30][1][0]?.value ||
+                    economicIndicatorData[30][1][1]?.value ||
                     0
                 )
               : "---"}
@@ -52,8 +52,8 @@ const LaborProductivity = ({
           <div className="stat-value">
             {economicIndicatorData?.length > 0
               ? formatPrice(
-                  economicIndicatorData[30][1][0]?.value ||
-                    economicIndicatorData[30][1][0]?.value ||
+                  economicIndicatorData[31][1][0]?.value ||
+                    economicIndicatorData[31][1][0]?.value ||
                     0
                 )
               : "---"}
@@ -64,8 +64,8 @@ const LaborProductivity = ({
           <div className="stat-value">
             {economicIndicatorData?.length > 0
               ? formatPrice(
-                  economicIndicatorData[31][1][0]?.value ||
-                    economicIndicatorData[31][1][0]?.value ||
+                  economicIndicatorData[32][1][0]?.value ||
+                    economicIndicatorData[32][1][0]?.value ||
                     0
                 )
               : "---"}

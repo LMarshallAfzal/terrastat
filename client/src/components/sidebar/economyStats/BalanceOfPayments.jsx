@@ -64,8 +64,8 @@ const BalanceOfPayments = ({
           <div className="stat-value">
             {economicIndicatorData?.length > 0
               ? formatPercentage(
-                  economicIndicatorData[24][1][0]?.value ||
-                    economicIndicatorData[24][1][0]?.value ||
+                  economicIndicatorData[25][1][0]?.value ||
+                    economicIndicatorData[25][1][0]?.value ||
                     0
                 )
               : "---"}
