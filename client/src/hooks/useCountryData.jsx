@@ -90,6 +90,12 @@ const useCountryData = () => {
       // Prices and terms of trade
       "FP.CPI.TOTL",
       "TT.PRI.MRCH.XD.WD",
+      // Labor & productivity
+      "SL.GDP.PCAP.EM.KD",
+      "SL.UEM.TOTL.ZS",
+      "NV.AGR.EMPL.KD",
+      "NV.IND.EMPL.KD",
+      "NV.SRV.EMPL.KD",
     ];
 
     const promises = indicators.map((indicator) => {
