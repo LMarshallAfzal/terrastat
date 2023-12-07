@@ -81,6 +81,12 @@ const useCountryData = () => {
       "NY.GNP.PCAP.PP.CD",
       "NY.GNS.ICTR.ZS",
       "NY.ADJ.SVNG.GN.ZS",
+      // Balance of payments
+      "TX.VAL.MRCH.XD.WD",
+      "TM.VAL.MRCH.XD.WD",
+      "BX.TRF.PWKR.DT.GD.ZS",
+      "BN.CAB.XOKA.GD.ZS",
+      "BX.KLT.DINV.WD.GD.ZS",
     ];
 
     const promises = indicators.map((indicator) => {

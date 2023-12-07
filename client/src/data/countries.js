@@ -41029,7 +41029,7 @@ const countriesData = {
             properties: {
                 formattedName: "Netherlands",
                 name: "Netherlands",
-                code: "NL1",
+                code: "NLD",
 
             },
             geometry: {

@@ -16,7 +16,7 @@ const LazyGrowthEconomicStructure = lazy(() =>
   import("./economyStats/Growth&EconomicStructure")
 );
 const LazyIncomeSavings = lazy(() => import("./economyStats/Income&Savings"));
-import BalanceOfPayments from "./economyStats/BalanceOfPayments";
+const LazyBalanceOfPayments = lazy(() => import("./economyStats/BalanceOfPayments"));
 import PricesTermsOfTrade from "./economyStats/Prices&TermsOfTrade";
 import LaborProductivity from "./economyStats/Labor&Productivity";
 
@@ -189,7 +189,13 @@ const Sidebar = ({
                 formatPrice={formatPrice}
               />
               </Suspense>
-              <BalanceOfPayments />
+              <Suspense fallback={<p>Loading...</p>}>
+              <LazyBalanceOfPayments 
+                economicIndicatorData={economicIndicatorData}
+                formatPercentage={formatPercentage}
+                formatRate={formatRate}
+              />
+              </Suspense>
               <PricesTermsOfTrade />
               <LaborProductivity />
             </>
