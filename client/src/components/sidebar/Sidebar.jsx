@@ -12,7 +12,9 @@ import EnergyMining from "./environmentStats/Energy&mining";
 import Environment from "./environmentStats/Environment";
 import UrbanRuralDevelopment from "./environmentStats/Urban&RuralDevelopment";
 import WaterSanitation from "./environmentStats/Water&Sanitation";
-import GrowthEconomicStructure from "./economyStats/Growth&EconomicStructure";
+const LazyGrowthEconomicStructure = lazy(() =>
+  import("./economyStats/Growth&EconomicStructure")
+);
 import IncomeSavings from "./economyStats/Income&Savings";
 import BalanceOfPayments from "./economyStats/BalanceOfPayments";
 import PricesTermsOfTrade from "./economyStats/Prices&TermsOfTrade";
@@ -20,7 +22,8 @@ import LaborProductivity from "./economyStats/Labor&Productivity";
 
 const Sidebar = ({
   countryData,
-  countryIndicatorData,
+  peopleIndicatorData,
+  economicIndicatorData,
   handleSidebarClose,
   clickedCountry,
   sidebarIsOpen,
@@ -46,6 +49,21 @@ const Sidebar = ({
       return `${(population / 1000000000).toFixed(1)}b`;
     }
   };
+
+  const formatGDP = (gdp) => {
+    if (gdp < 1000) {
+      return gdp.toLocaleString(undefined, { maximumFractionDigits: 2 });
+    } else if (gdp < 1000000) {
+      return `${(gdp / 1000).toFixed(2)}k`;
+    } else if (gdp < 1000000000) {
+      return `${(gdp / 1000000).toFixed(2)}m`;
+    } else if (gdp < 1000000000000) {
+      return `${(gdp / 1000000000).toFixed(2)}b`;
+    } else {
+      return `${(gdp / 1000000000000).toFixed(2)}t`;
+    }
+  };
+  
 
   const formatRate = (value) => {
     if (value === 0 || value === null || value === undefined) {
@@ -119,7 +137,7 @@ const Sidebar = ({
             <>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyPopulationDynamics
-                  countryIndicatorData={countryIndicatorData}
+                  peopleIndicatorData={peopleIndicatorData}
                   formatPopulation={formatPopulation}
                   formatRate={formatRate}
                   formatPercentage={formatPercentage}
@@ -127,19 +145,19 @@ const Sidebar = ({
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyEducation
-                  countryIndicatorData={countryIndicatorData}
+                  peopleIndicatorData={peopleIndicatorData}
                   formatPercentage={formatPercentage}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyLabor
-                  countryIndicatorData={countryIndicatorData}
+                  peopleIndicatorData={peopleIndicatorData}
                   formatPercentage={formatPercentage}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyHealth
-                  countryIndicatorData={countryIndicatorData}
+                  peopleIndicatorData={peopleIndicatorData}
                   formatPercentage={formatPercentage}
                   formatRate={formatRate}
                 />
@@ -158,7 +176,13 @@ const Sidebar = ({
           )}
           {activeIndicator === "economy" && (
             <>
-              <GrowthEconomicStructure />
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyGrowthEconomicStructure
+                  economicIndicatorData={economicIndicatorData}
+                  formatPercentage={formatPercentage}
+                  formatGDP={formatGDP}
+                />
+              </Suspense>
               <IncomeSavings />
               <BalanceOfPayments />
               <PricesTermsOfTrade />

@@ -1,5 +1,7 @@
 const useCountryData = () => {
 
+  // const INDICATOR_URL = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
+
   const fetchCountryData = async (countryCode) => {
     const url = `https://api.worldbank.org/v2/country/${countryCode}?format=json`;
     const response = await fetch(url);
@@ -7,7 +9,7 @@ const useCountryData = () => {
     return data;
   }
 
-  const fetchCountryIndicatorData = async (countryCode) => {
+  const fetchPeopleIndicatorData = async (countryCode) => {
     const indicators = [
       "SP.POP.TOTL",
       "SP.POP.GROW",
@@ -54,9 +56,40 @@ const useCountryData = () => {
     return data;
   };
 
+  const fetchEconomicIndicatorData = async (countryCode) => {
+    const indicators = [
+      "NY.GDP.MKTP.CD",
+      "NY.GDP.MKTP.KD.ZG",
+      "NV.AGR.TOTL.KD.ZG",
+      "NV.IND.TOTL.KD.ZG",
+      "NV.IND.MANF.KD.ZG",
+      "NV.SRV.TOTL.KD.ZG",
+      "NE.CON.TOTL.KD.ZG",
+      "NE.GDI.TOTL.KD.ZG",
+      "NE.EXP.GNFS.KD.ZG",
+      "NE.IMP.GNFS.KD.ZG",
+      "NV.AGR.TOTL.ZS",
+      "NV.IND.TOTL.ZS",
+      "NV.SRV.TOTL.ZS",
+      "NE.CON.TOTL.ZS",
+      "NE.GDI.TOTL.ZS",
+      "NE.EXP.GNFS.ZS",
+      "NE.IMP.GNFS.ZS",
+    ];
+
+    const promises = indicators.map((indicator) => {
+      const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
+      return fetch(url).then((response) => response.json());
+    });
+
+    const data = await Promise.all(promises);
+    return data;
+  };
+
   return {
     fetchCountryData,
-    fetchCountryIndicatorData
+    fetchPeopleIndicatorData,
+    fetchEconomicIndicatorData,
   };
 };
 

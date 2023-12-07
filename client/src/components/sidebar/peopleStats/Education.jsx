@@ -1,7 +1,7 @@
 import "../Sidebar.css"
 
 const Education = ({
-  countryIndicatorData,
+  peopleIndicatorData,
   formatPercentage,
 }) => {
   return (
@@ -11,10 +11,10 @@ const Education = ({
         <div className="stats">
           <div className="stat-label">Gov. exp. on education</div>
           <div className="stat-value">
-            {countryIndicatorData?.length > 0
+            {peopleIndicatorData?.length > 0
               ? formatPercentage(
-                  countryIndicatorData[9][1][0]?.value ||
-                    countryIndicatorData[9][1][1]?.value ||
+                  peopleIndicatorData[9][1][0]?.value ||
+                    peopleIndicatorData[9][1][1]?.value ||
                     0
                 )
               : "---"}
@@ -25,10 +25,10 @@ const Education = ({
         <div className="stats">
           <div className="stat-label">School enrollment, primary</div>
           <div className="stat-value">
-            {countryIndicatorData?.length > 0
+            {peopleIndicatorData?.length > 0
               ? formatPercentage(
-                  countryIndicatorData[10][1][0]?.value ||
-                    countryIndicatorData[10][1][1]?.value ||
+                  peopleIndicatorData[10][1][0]?.value ||
+                    peopleIndicatorData[10][1][1]?.value ||
                     0
                 )
               : "---"}
@@ -37,10 +37,10 @@ const Education = ({
         <div className="stats">
           <div className="stat-label">School enrollment, secondary</div>
           <div className="stat-value">
-            {countryIndicatorData?.length > 0
+            {peopleIndicatorData?.length > 0
               ? formatPercentage(
-                  countryIndicatorData[11][1][0]?.value ||
-                    countryIndicatorData[11][1][1]?.value ||
+                  peopleIndicatorData[11][1][0]?.value ||
+                    peopleIndicatorData[11][1][1]?.value ||
                     0
                 )
               : "---"}
@@ -49,10 +49,10 @@ const Education = ({
         <div className="stats">
           <div className="stat-label">School enrollment, tertiary</div>
           <div className="stat-value">
-            {countryIndicatorData?.length > 0
+            {peopleIndicatorData?.length > 0
               ? formatPercentage(
-                  countryIndicatorData[12][1][0]?.value ||
-                    countryIndicatorData[12][1][1]?.value ||
+                  peopleIndicatorData[12][1][0]?.value ||
+                    peopleIndicatorData[12][1][1]?.value ||
                     0
                 )
               : "---"}
@@ -63,16 +63,16 @@ const Education = ({
         <div className="stats">
           <div className="stat-label">Progression to secondary school</div>
           <div className="stat-value">
-            {countryIndicatorData?.length > 0
+            {peopleIndicatorData?.length > 0
               ? formatPercentage(
-                  countryIndicatorData[13][1][0]?.value ||
-                    countryIndicatorData[13][1][1]?.value ||
-                    countryIndicatorData[13][1][2]?.value ||
-                    countryIndicatorData[13][1][3]?.value ||
-                    countryIndicatorData[13][1][4]?.value ||
-                    countryIndicatorData[13][1][5]?.value ||
-                    countryIndicatorData[13][1][6]?.value ||
-                    countryIndicatorData[13][1][7]?.value ||
+                  peopleIndicatorData[13][1][0]?.value ||
+                    peopleIndicatorData[13][1][1]?.value ||
+                    peopleIndicatorData[13][1][2]?.value ||
+                    peopleIndicatorData[13][1][3]?.value ||
+                    peopleIndicatorData[13][1][4]?.value ||
+                    peopleIndicatorData[13][1][5]?.value ||
+                    peopleIndicatorData[13][1][6]?.value ||
+                    peopleIndicatorData[13][1][7]?.value ||
                     0
                 )
               : "---"}
@@ -81,12 +81,12 @@ const Education = ({
         <div className="stats">
           <div className="stat-label">Primary completion rate, total</div>
           <div className="stat-value">
-            {countryIndicatorData?.length > 0
+            {peopleIndicatorData?.length > 0
               ? formatPercentage(
-                  countryIndicatorData[14][1][0]?.value ||
-                    countryIndicatorData[14][1][1]?.value ||
-                    countryIndicatorData[14][1][2]?.value ||
-                    countryIndicatorData[14][1][3]?.value ||
+                  peopleIndicatorData[14][1][0]?.value ||
+                    peopleIndicatorData[14][1][1]?.value ||
+                    peopleIndicatorData[14][1][2]?.value ||
+                    peopleIndicatorData[14][1][3]?.value ||
                     0
                 )
               : "---"}
@@ -95,14 +95,14 @@ const Education = ({
         <div className="stats">
           <div className="stat-label">Literacy rate, youth total</div>
           <div className="stat-value">
-            {countryIndicatorData?.length > 0
+            {peopleIndicatorData?.length > 0
               ? formatPercentage(
-                  countryIndicatorData[15][1][0]?.value ||
-                    countryIndicatorData[15][1][1]?.value ||
-                    countryIndicatorData[15][1][2]?.value ||
-                    countryIndicatorData[15][1][3]?.value ||
-                    countryIndicatorData[15][1][4]?.value ||
-                    countryIndicatorData[15][1][5]?.value ||
+                  peopleIndicatorData[15][1][0]?.value ||
+                    peopleIndicatorData[15][1][1]?.value ||
+                    peopleIndicatorData[15][1][2]?.value ||
+                    peopleIndicatorData[15][1][3]?.value ||
+                    peopleIndicatorData[15][1][4]?.value ||
+                    peopleIndicatorData[15][1][5]?.value ||
                     0
                 )
               : "---"}
