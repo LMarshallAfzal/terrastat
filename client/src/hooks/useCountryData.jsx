@@ -129,6 +129,13 @@ const useCountryData = () => {
       "ER.LND.PTLD.ZS",
       "ER.PTD.TOTL.ZS",
       "ER.MRN.PTMR.ZS",
+      // Urban & rural development
+      "EG.ELC.ACCS.UR.ZS",
+      "SH.H2O.BASW.UR.ZS",
+      "SH.STA.BASS.UR.ZS",
+      "EG.ELC.ACCS.RU.ZS",
+      "SH.STA.BASS.RU.ZS",
+      "SH.H2O.BASW.RU.ZS",
     ];
 
     const promises = indicators.map((indicator) => {
