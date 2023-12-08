@@ -123,6 +123,12 @@ const useCountryData = () => {
       "EG.ELC.RNEW.ZS",
       "EG.ELC.ACCS.ZS",
       "EG.CFT.ACCS.ZS",
+      // Environment
+      "AG.LND.FRST.ZS",
+      "NY.GDP.TOTL.RT.ZS",
+      "ER.LND.PTLD.ZS",
+      "ER.PTD.TOTL.ZS",
+      "ER.MRN.PTMR.ZS",
     ];
 
     const promises = indicators.map((indicator) => {
