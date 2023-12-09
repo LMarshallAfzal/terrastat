@@ -11,7 +11,6 @@ const LazyClimate = lazy(() => import("./environmentStats/Climate"));
 const LazyEnergyMining = lazy(() => import("./environmentStats/Energy&mining"));
 const LazyEnvironment = lazy(() => import("./environmentStats/Environment"));
 const LazyUrbanRuralDevelopment = lazy(() => import("./environmentStats/Urban&RuralDevelopment"));
-import WaterSanitation from "./environmentStats/Water&Sanitation";
 const LazyGrowthEconomicStructure = lazy(() =>
   import("./economyStats/Growth&EconomicStructure")
 );
@@ -217,7 +216,6 @@ const Sidebar = ({
                   formatPercentage={formatPercentage}
                 />
               </Suspense>
-              <WaterSanitation />
             </>
           )}
           {activeIndicator === "economy" && (

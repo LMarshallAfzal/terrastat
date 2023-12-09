@@ -35,7 +35,7 @@ function App() {
       setEnvironmentIndicatorData(await fetchEnvironmentIndicatorData(country.properties.code));
 
       setSidebarIsOpen(true);
-      console.log(environmentIndicatorData);
+      console.log(economicIndicatorData);
     }
   };
 
