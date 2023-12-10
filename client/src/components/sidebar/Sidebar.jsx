@@ -1,8 +1,7 @@
 import { useState, lazy, Suspense } from "react";
 import "./Sidebar.css";
-const LazyPopulationDynamics = lazy(() =>
-  import("./peopleStats/PopulationDynamics")
-);
+import * as utils from "../../utils/utils";
+const LazyPopulationDynamics = lazy(() => import("./peopleStats/PopulationDynamics"));
 const LazyEducation = lazy(() => import("./peopleStats/Education"));
 const LazyLabor = lazy(() => import("./peopleStats/Labor"));
 const LazyHealth = lazy(() => import("./peopleStats/Health"));
@@ -11,19 +10,11 @@ const LazyClimate = lazy(() => import("./environmentStats/Climate"));
 const LazyEnergyMining = lazy(() => import("./environmentStats/Energy&mining"));
 const LazyEnvironment = lazy(() => import("./environmentStats/Environment"));
 const LazyUrbanRuralDevelopment = lazy(() => import("./environmentStats/Urban&RuralDevelopment"));
-const LazyGrowthEconomicStructure = lazy(() =>
-  import("./economyStats/Growth&EconomicStructure")
-);
+const LazyGrowthEconomicStructure = lazy(() => import("./economyStats/Growth&EconomicStructure"));
 const LazyIncomeSavings = lazy(() => import("./economyStats/Income&Savings"));
-const LazyBalanceOfPayments = lazy(() =>
-  import("./economyStats/BalanceOfPayments")
-);
-const LazyPricesTermsOfTrade = lazy(() =>
-  import("./economyStats/Prices&TermsOfTrade")
-);
-const LazyLaborProductivity = lazy(() =>
-  import("./economyStats/Labor&Productivity")
-);
+const LazyBalanceOfPayments = lazy(() => import("./economyStats/BalanceOfPayments"));
+const LazyPricesTermsOfTrade = lazy(() => import("./economyStats/Prices&TermsOfTrade"));
+const LazyLaborProductivity = lazy(() => import("./economyStats/Labor&Productivity"));
 
 const Sidebar = ({
   countryData,
@@ -43,60 +34,6 @@ const Sidebar = ({
     { label: "States & Markets" },
     { label: "Global Links" },
   ];
-
-  const formatPopulation = (population) => {
-    if (population < 1000) {
-      return population.toLocaleString();
-    } else if (population < 1000000) {
-      return `${(population / 1000).toFixed(1)}k`;
-    } else if (population < 1000000000) {
-      return `${(population / 1000000).toFixed(1)}m`;
-    } else {
-      return `${(population / 1000000000).toFixed(1)}b`;
-    }
-  };
-
-  const formatPrice = (value) => {
-    if (value === 0 || value === null || value === undefined) {
-      return "---";
-    } else {
-      if (value < 1000) {
-        return `US$${value.toFixed(2)}`;
-      } else if (value < 1000000) {
-        return `US$${(value / 1000).toFixed(2)}k`;
-      } else if (value < 1000000000) {
-        return `US$${(value / 1000000).toFixed(2)}m`;
-      } else if (value < 1000000000000) {
-        return `US$${(value / 1000000000).toFixed(2)}b`;
-      } else {
-        return `US$${(value / 1000000000000).toFixed(2)}t`;
-      }
-    }
-  };
-
-  const formatRate = (value) => {
-    if (value === 0 || value === null || value === undefined) {
-      return "---";
-    } else {
-      return value.toFixed(2);
-    }
-  };
-
-  const formatPercentage = (value) => {
-    if (value === 0 || value === null || value === undefined) {
-      return "---";
-    } else {
-      return value.toFixed(2) + "%";
-    }
-  };
-
-  const formatValue = (value, unit) => {
-    if (value === 0 || value === null || value === undefined) {
-      return "---";
-    } else {
-      return value + unit;
-    }
-  };
 
   const handleButtonClick = (buttonIndex) => {
     let newActiveIndicator = "";
@@ -155,28 +92,28 @@ const Sidebar = ({
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyPopulationDynamics
                   peopleIndicatorData={peopleIndicatorData}
-                  formatPopulation={formatPopulation}
-                  formatRate={formatRate}
-                  formatPercentage={formatPercentage}
+                  formatPopulation={utils.formatPopulation}
+                  formatRate={utils.formatRate}
+                  formatPercentage={utils.formatPercentage}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyEducation
                   peopleIndicatorData={peopleIndicatorData}
-                  formatPercentage={formatPercentage}
+                  formatPercentage={utils.formatPercentage}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyLabor
                   peopleIndicatorData={peopleIndicatorData}
-                  formatPercentage={formatPercentage}
+                  formatPercentage={utils.formatPercentage}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyHealth
                   peopleIndicatorData={peopleIndicatorData}
-                  formatPercentage={formatPercentage}
-                  formatRate={formatRate}
+                  formatPercentage={utils.formatPercentage}
+                  formatRate={utils.formatRate}
                 />
               </Suspense>
             </>
@@ -186,34 +123,34 @@ const Sidebar = ({
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyAgriculture
                   environmentIndicatorData={environmentIndicatorData}
-                  formatPercentage={formatPercentage}
-                  formatValue={formatValue}
+                  formatPercentage={utils.formatPercentage}
+                  formatValue={utils.formatValue}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
-              <LazyClimate 
-                environmentIndicatorData={environmentIndicatorData}
-                formatPercentage={formatPercentage}
-                formatRate={formatRate}
-              />
-              </Suspense>
-              <Suspense fallback={<p>Loading...</p>}>
-              <LazyEnergyMining 
-                environmentIndicatorData={environmentIndicatorData}
-                formatPercentage={formatPercentage}
-                formatRate={formatRate}
-              />
-              </Suspense>
-              <Suspense fallback={<p>Loading...</p>}>
-                <LazyEnvironment 
+                <LazyClimate
                   environmentIndicatorData={environmentIndicatorData}
-                  formatPercentage={formatPercentage}
+                  formatPercentage={utils.formatPercentage}
+                  formatRate={utils.formatRate}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
-                <LazyUrbanRuralDevelopment 
+                <LazyEnergyMining
                   environmentIndicatorData={environmentIndicatorData}
-                  formatPercentage={formatPercentage}
+                  formatPercentage={utils.formatPercentage}
+                  formatRate={utils.formatRate}
+                />
+              </Suspense>
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyEnvironment
+                  environmentIndicatorData={environmentIndicatorData}
+                  formatPercentage={utils.formatPercentage}
+                />
+              </Suspense>
+              <Suspense fallback={<p>Loading...</p>}>
+                <LazyUrbanRuralDevelopment
+                  environmentIndicatorData={environmentIndicatorData}
+                  formatPercentage={utils.formatPercentage}
                 />
               </Suspense>
             </>
@@ -223,35 +160,35 @@ const Sidebar = ({
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyGrowthEconomicStructure
                   economicIndicatorData={economicIndicatorData}
-                  formatPercentage={formatPercentage}
-                  formatPrice={formatPrice}
+                  formatPercentage={utils.formatPercentage}
+                  formatPrice={utils.ormatPrice}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyIncomeSavings
                   economicIndicatorData={economicIndicatorData}
-                  formatPercentage={formatPercentage}
-                  formatPrice={formatPrice}
+                  formatPercentage={utils.formatPercentage}
+                  formatPrice={utils.formatPrice}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyBalanceOfPayments
                   economicIndicatorData={economicIndicatorData}
-                  formatPercentage={formatPercentage}
-                  formatRate={formatRate}
+                  formatPercentage={utils.formatPercentage}
+                  formatRate={utils.formatRate}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyPricesTermsOfTrade
                   economicIndicatorData={economicIndicatorData}
-                  formatRate={formatRate}
+                  formatRate={utils.formatRate}
                 />
               </Suspense>
               <Suspense fallback={<p>Loading...</p>}>
                 <LazyLaborProductivity
                   economicIndicatorData={economicIndicatorData}
-                  formatPrice={formatPrice}
-                  formatPercentage={formatPercentage}
+                  formatPrice={utils.formatPrice}
+                  formatPercentage={utils.formatPercentage}
                 />
               </Suspense>
             </>
