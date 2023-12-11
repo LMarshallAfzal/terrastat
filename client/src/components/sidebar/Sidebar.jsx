@@ -79,7 +79,9 @@ const Sidebar = ({
             <PeopleStatistics peopleIndicatorData={peopleIndicatorData} />
           )}
           {activeIndicator === "environment" && (
-            <EnvironmentStatistics environmentIndicatorData={environmentIndicatorData} />
+            <EnvironmentStatistics
+              environmentIndicatorData={environmentIndicatorData}
+            />
           )}
           {activeIndicator === "economy" && (
             <EconomyStatistics economicIndicatorData={economicIndicatorData} />

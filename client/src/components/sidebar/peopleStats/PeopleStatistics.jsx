@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import * as utils from "../../../utils/utils";
+import * as utils from "../../../utils/formatting";
 const LazyPopulationDynamics = lazy(() => import("./indicators/PopulationDynamics"));
 const LazyEducation = lazy(() => import("./indicators/Education"));
 const LazyLabor = lazy(() => import("./indicators/Labor"));

@@ -13,7 +13,12 @@ const northeastCorner = latLng([85.0511, 180]);
 const bounds = latLngBounds(southwestCorner, northeastCorner);
 
 function App() {
-  const { fetchCountryData, fetchPeopleIndicatorData, fetchEconomicIndicatorData, fetchEnvironmentIndicatorData } = useCountryData();
+  const {
+    fetchCountryData,
+    fetchPeopleIndicatorData,
+    fetchEconomicIndicatorData,
+    fetchEnvironmentIndicatorData,
+  } = useCountryData();
 
   const [clickedCountry, setClickedCountry] = useState(null);
   const [countryData, setCountryData] = useState([]);
@@ -30,9 +35,15 @@ function App() {
       setClickedCountry(country);
       const countryData = await fetchCountryData(country.properties.code);
       setCountryData(countryData);
-      setPeopleIndicatorData(await fetchPeopleIndicatorData(country.properties.code));
-      setEconomicIndicatorData(await fetchEconomicIndicatorData(country.properties.code));
-      setEnvironmentIndicatorData(await fetchEnvironmentIndicatorData(country.properties.code));
+      setPeopleIndicatorData(
+        await fetchPeopleIndicatorData(country.properties.code)
+      );
+      setEconomicIndicatorData(
+        await fetchEconomicIndicatorData(country.properties.code)
+      );
+      setEnvironmentIndicatorData(
+        await fetchEnvironmentIndicatorData(country.properties.code)
+      );
 
       setSidebarIsOpen(true);
       console.log(economicIndicatorData);
@@ -58,6 +69,7 @@ function App() {
             attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=2K46SsHb5CdTvQzDyjPq"
           />
+
           {countriesData.features.map((country) => {
             const coordinates = country.geometry.coordinates[0].map((item) => [
               item[1],
