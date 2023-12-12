@@ -58,24 +58,32 @@ const RightSidebar = ({
         right: sidebarIsOpen ? "0" : "-400px",
       }}
     >
-      <div className="country indicator-container">
-        <h2>{(countryData?.length > 0 && countryData[1][0]?.name) || ""}</h2>
-      </div>
-      <div className="button-row">
-        {buttons?.map((button, index) => (
-          <button
-            className={
-              activeIndicator === button.label.toLowerCase()
-                ? "indicator-group-button clicked-button"
-                : "indicator-group-button"
-            }
-            key={index}
-            onClick={() => handleButtonClick(index)}
-          >
-            {button.label}
-          </button>
-        ))}
-      </div>
+      {countryDataLoading ? (
+          <div className="loading-spinner-container">
+            <div className="loading-spinner"></div>
+          </div>
+        ) : (
+      <>
+        <div className="country indicator-container">
+          <h2>{(countryData?.length > 0 && countryData[1][0]?.name) || ""}</h2>
+        </div>
+        <div className="button-row">
+          {buttons?.map((button, index) => (
+            <button
+              className={
+                activeIndicator === button.label.toLowerCase()
+                  ? "indicator-group-button clicked-button"
+                  : "indicator-group-button"
+              }
+              key={index}
+              onClick={() => handleButtonClick(index)}
+            >
+              {button.label}
+            </button>
+          ))}
+        </div>
+        </>
+      )}
       <>
         {activeIndicator === "people" && (
           <PeopleStatistics
