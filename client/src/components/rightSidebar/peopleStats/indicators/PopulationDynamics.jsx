@@ -33,6 +33,7 @@ const PopulationDynamics = ({
                 )
               : "---"}
           </div>
+          {/* <div className="stat-year-label">2020</div> */}
         </div>
       </div>
       <div className="stat-row">
