@@ -13,6 +13,32 @@ const southwestCorner = latLng([-85.0511, -180]);
 const northeastCorner = latLng([85.0511, 180]);
 const bounds = latLngBounds(southwestCorner, northeastCorner);
 
+const defaultStyle = {
+  fillColor: "#000",
+  fillOpacity: 0.7,
+  weight: 3,
+  opacity: 0.7,
+  dashArray: 3,
+  color: "black",
+};
+
+const highlightStyle = {
+  fillOpacity: 0.7,
+  weight: 5,
+  dashArray: "",
+  color: "#807c7c",
+  fillColor: "#ffffff",
+};
+
+const clickStyle = {
+  fillColor: "#fa0000",
+  fillOpacity: 1,
+  weight: 5,
+  opacity: 1,
+  dashArray: "",
+  color: "#807c7c",
+};
+
 function App() {
   const {
     fetchCountryData,
@@ -29,18 +55,23 @@ function App() {
   const [environmentIndicatorData, setEnvironmentIndicatorData] = useState([]);
   const [economicIndicatorData, setEconomicIndicatorData] = useState([]);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  const [countryStyles, setCountryStyles] = useState({});
+
+  // useEffect(() => {
+  //   console.log("Clicked Country Updated:", clickedCountry);
+  // }, [clickedCountry]);
 
   const handleCountryClick = async (country) => {
-    if (clickedCountry === country) {
-      setClickedCountry(null);
+    if (clickedCountry === country.properties.ISO_A3) {
+      setClickedCountry("");
       setSidebarIsOpen(false);
+      setCountryStyles({});
     } else {
-      setClickedCountry(country);
       const [countryData, restData] = await Promise.all([
         fetchCountryData(country.properties.ISO_A3),
         fetchRESTCountryData(country.properties.ADMIN),
       ]);
-  
+      
       setCountryData(countryData);
       setRestCountryData(restData);
 
@@ -53,51 +84,35 @@ function App() {
       setEnvironmentIndicatorData(
         await fetchEnvironmentIndicatorData(country.properties.ISO_A3)
       );
+
+      setCountryStyles({
+        [country.properties.ISO_A3]: clickStyle,
+      });
+
+      setClickedCountry(country.properties.ISO_A3);
       setSidebarIsOpen(true);
     }
-    console.log(restCountryData)
-  };
-
-  const defaultStyle = {
-    fillColor: "#000",
-    fillOpacity: 0.7,
-    weight: 3,
-    opacity: 0.7,
-    dashArray: 3,
-    color: "black",
-  };
-
-  const highlightStyle = {
-    fillOpacity: 0.7,
-    weight: 5,
-    dashArray: "",
-    color: "#807c7c",
-    fillColor: "#ffffff",
-  };
-
-  const clickStyle = {
-    fillColor: "#fa0000",
-    fillOpacity: 1,
-    weight: 5,
-    opacity: 1,
-    dashArray: "",
-    color: "#807c7c",
   };
 
   const onEachCountry = (country, layer) => {
     layer.on({
-      click: (e) => {
-        e.target.setStyle(clickStyle);
+      click: () => {
         handleCountryClick(country);
       },
-      mouseover: (e) => {
-        if (clickedCountry !== country) {
-          e.target.setStyle(highlightStyle);
+      mouseover: () => {
+        if (clickedCountry !== country.properties.ISO_A3) {
+          setCountryStyles((prevStyles) => ({
+            ...prevStyles,
+            [country.properties.ISO_A3]: highlightStyle,
+          }));
         }
       },
-      mouseout: (e) => {
-        if (clickedCountry !== country) {
-          e.target.setStyle(defaultStyle);
+      mouseout: () => {
+        if (clickedCountry !== country.properties.ISO_A3) {
+          setCountryStyles((prevStyles) => ({
+            ...prevStyles,
+            [country.properties.ISO_A3]: defaultStyle,
+          }));
         }
       },
     });
@@ -125,8 +140,11 @@ function App() {
 
           <GeoJSON
             data={countriesData.features}
-            style={defaultStyle}
+            style={(feature) =>
+              countryStyles[feature.properties.ISO_A3] || defaultStyle
+            }
             onEachFeature={onEachCountry}
+            
           />
           <RightSidebar
             countryData={countryData}
@@ -137,7 +155,7 @@ function App() {
             clickedCountry={clickedCountry}
             sidebarIsOpen={sidebarIsOpen}
           />
-          <LeftSidebar 
+          <LeftSidebar
             countryData={countryData}
             restCountryData={restCountryData}
             sidebarIsOpen={sidebarIsOpen}
