@@ -46,6 +46,11 @@ function App() {
     fetchPeopleIndicatorData,
     fetchEconomicIndicatorData,
     fetchEnvironmentIndicatorData,
+    restCountryLoading,
+    countryDataLoading,
+    peopleIndicatorLoading,
+    economicIndicatorLoading,
+    environmentIndicatorLoading,
   } = useCountryData();
 
   const [clickedCountry, setClickedCountry] = useState(null);
@@ -151,13 +156,17 @@ function App() {
             peopleIndicatorData={peopleIndicatorData}
             environmentIndicatorData={environmentIndicatorData}
             economicIndicatorData={economicIndicatorData}
+            countryDataLoading={countryDataLoading}
+            peopleIndicatorLoading={peopleIndicatorLoading}
+            economicIndicatorLoading={economicIndicatorLoading}
+            environmentIndicatorLoading={environmentIndicatorLoading}
             handleSidebarClose={handleSidebarClose}
-            clickedCountry={clickedCountry}
             sidebarIsOpen={sidebarIsOpen}
           />
           <LeftSidebar
             countryData={countryData}
             restCountryData={restCountryData}
+            restCountryLoading={restCountryLoading}
             sidebarIsOpen={sidebarIsOpen}
             handleSidebarClose={handleSidebarClose}
           />

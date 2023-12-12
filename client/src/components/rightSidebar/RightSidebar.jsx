@@ -9,8 +9,11 @@ const RightSidebar = ({
   peopleIndicatorData,
   environmentIndicatorData,
   economicIndicatorData,
+  countryDataLoading,
+  peopleIndicatorLoading,
+  economicIndicatorLoading,
+  environmentIndicatorLoading,
   handleSidebarClose,
-  // clickedCountry,
   sidebarIsOpen,
 }) => {
   const [activeIndicator, setActiveIndicator] = useState("people");
@@ -73,24 +76,22 @@ const RightSidebar = ({
           </button>
         ))}
       </div>
-      {/* {clickedCountry && ( */}
-        <>
-          {activeIndicator === "people" && (
-            <PeopleStatistics peopleIndicatorData={peopleIndicatorData} />
-          )}
-          {activeIndicator === "environment" && (
-            <EnvironmentStatistics
-              environmentIndicatorData={environmentIndicatorData}
-            />
-          )}
-          {activeIndicator === "economy" && (
-            <EconomyStatistics economicIndicatorData={economicIndicatorData} />
-          )}
-        </>
-      {/* )} */}
+      <>
+        {activeIndicator === "people" && (
+          <PeopleStatistics peopleIndicatorData={peopleIndicatorData} peopleIndicatorLoading={peopleIndicatorLoading}/>
+        )}
+        {activeIndicator === "environment" && (
+          <EnvironmentStatistics
+            environmentIndicatorData={environmentIndicatorData}
+          />
+        )}
+        {activeIndicator === "economy" && (
+          <EconomyStatistics economicIndicatorData={economicIndicatorData} />
+        )}
+      </>
       <button onClick={handleSidebarClose}>Close Sidebar</button>
     </div>
   );
 };
 
-export default RightSidebar
+export default RightSidebar;
