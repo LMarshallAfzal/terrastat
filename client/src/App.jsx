@@ -72,6 +72,8 @@ function App() {
       setSidebarIsOpen(false);
       setCountryStyles({});
     } else {
+      setSidebarIsOpen(true);
+
       const [countryData, restData] = await Promise.all([
         fetchCountryData(country.properties.ISO_A3),
         fetchRESTCountryData(country.properties.ADMIN),
@@ -95,7 +97,6 @@ function App() {
       });
 
       setClickedCountry(country.properties.ISO_A3);
-      setSidebarIsOpen(true);
     }
   };
 

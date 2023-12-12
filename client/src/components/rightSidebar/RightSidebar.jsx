@@ -78,15 +78,22 @@ const RightSidebar = ({
       </div>
       <>
         {activeIndicator === "people" && (
-          <PeopleStatistics peopleIndicatorData={peopleIndicatorData} peopleIndicatorLoading={peopleIndicatorLoading}/>
+          <PeopleStatistics
+            peopleIndicatorData={peopleIndicatorData}
+            peopleIndicatorLoading={peopleIndicatorLoading}
+          />
         )}
         {activeIndicator === "environment" && (
           <EnvironmentStatistics
             environmentIndicatorData={environmentIndicatorData}
+            environmentIndicatorLoading={environmentIndicatorLoading}
           />
         )}
         {activeIndicator === "economy" && (
-          <EconomyStatistics economicIndicatorData={economicIndicatorData} />
+          <EconomyStatistics
+            economicIndicatorData={economicIndicatorData}
+            economicIndicatorLoading={economicIndicatorLoading}
+          />
         )}
       </>
       <button onClick={handleSidebarClose}>Close Sidebar</button>
