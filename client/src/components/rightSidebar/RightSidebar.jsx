@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./RightSidebar.css";
+import "../../styling/loading.css"
 import PeopleStatistics from "./peopleStats/PeopleStatistics";
 import EnvironmentStatistics from "./environmentStats/EnvironmentStatistics";
 import EconomyStatistics from "./economyStats/EconomyStatistics";

@@ -14,7 +14,7 @@ const useCountryData = () => {
     try {
       setRestCountryLoading(true);
       const url = `https://restcountries.com/v3.1/name/${countryName}`;
-      const response = await fetch(url);
+      const response = await fetch(url, { mode: 'cors' });
       const data = await response.json();
       setRestCountryLoading(false);
 
@@ -30,7 +30,7 @@ const useCountryData = () => {
     try {
       setCountryDataLoading(true);
       const url = `https://api.worldbank.org/v2/country/${countryCode}?format=json`;
-      const response = await fetch(url);
+      const response = await fetch(url, { mode: 'cors' });
       const data = await response.json();
       setCountryDataLoading(false);
       return data;
@@ -46,7 +46,7 @@ const useCountryData = () => {
       setPeopleIndicatorLoading(true);
       const promises = peopleIndicators.map(async (indicator) => {
         const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
-        const response = await fetch(url);
+        const response = await fetch(url, { mode: 'cors' });
         return await response.json();
       });
 
@@ -65,7 +65,7 @@ const useCountryData = () => {
       setEconomicIndicatorLoading(true);
       const promises = economicIndicators.map(async (indicator) => {
         const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
-        const response = await fetch(url);
+        const response = await fetch(url, { mode: 'cors' });
         return await response.json();
       });
 
@@ -84,7 +84,7 @@ const useCountryData = () => {
       setEnvironmentIndicatorLoading(true);
       const promises = environmentIndicators.map(async (indicator) => {
         const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
-        const response = await fetch(url);
+        const response = await fetch(url, { mode: 'cors' });
         return await response.json();
       });
 
