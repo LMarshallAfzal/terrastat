@@ -1,4 +1,4 @@
-import "../../Sidebar.css";
+import "../../RightSidebar.css";
 
 const UrbanRuralDevelopment = ({
   environmentIndicatorData,

@@ -3,7 +3,19 @@ import economicIndicators from "../data/economic-indicators";
 import environmentIndicators from "../data/environment-indicators";
 
 const useCountryData = () => {
-  // const INDICATOR_URL = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
+
+  const fetchRESTCountryData = async (countryName) => {
+    try {
+      const url = `https://restcountries.com/v3.1/name/${countryName}`;
+      const response = await fetch(url);
+      const data = await response.json();
+
+      return data;
+    } catch (error) {
+      console.error(`Error fetching country data: ${error.message}`);
+      return null;
+    }
+  };
 
   const fetchCountryData = async (countryCode) => {
     try {
@@ -67,6 +79,7 @@ const useCountryData = () => {
 
   return {
     fetchCountryData,
+    fetchRESTCountryData,
     fetchPeopleIndicatorData,
     fetchEnvironmentIndicatorData,
     fetchEconomicIndicatorData,

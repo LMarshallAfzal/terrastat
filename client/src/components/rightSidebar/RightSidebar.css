@@ -1,4 +1,4 @@
-.sidebar {
+.right-sidebar {
   right: 0;
   top: 0;
   padding-top: 10px;
@@ -15,7 +15,7 @@
   transition: right 0.5s ease-in-out;
 }
 
-.sidebar .indicator-container {
+.right-sidebar .indicator-container {
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -25,17 +25,17 @@
   margin: 0 auto 10px;
 }
 
-.sidebar .button-row {
+.right-sidebar .button-row {
   width: 350px;
   border-radius: 10px;
   margin: 0 auto 10px;
 }
 
-.sidebar .indicator-group-button {
+.right-sidebar .indicator-group-button {
   margin: 2px;
 }
 
-.sidebar .clicked-button {
+.right-sidebar .clicked-button {
   background-color: #838587;
 }
 

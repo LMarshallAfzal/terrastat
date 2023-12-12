@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./Sidebar.css";
+import "./RightSidebar.css";
 import PeopleStatistics from "./peopleStats/PeopleStatistics";
 import EnvironmentStatistics from "./environmentStats/EnvironmentStatistics";
 import EconomyStatistics from "./economyStats/EconomyStatistics";
 
-const Sidebar = ({
+const RightSidebar = ({
   countryData,
   peopleIndicatorData,
   environmentIndicatorData,
@@ -50,7 +50,7 @@ const Sidebar = ({
 
   return (
     <div
-      className="sidebar"
+      className="right-sidebar"
       style={{
         right: sidebarIsOpen ? "0" : "-400px",
       }}
@@ -93,4 +93,4 @@ const Sidebar = ({
   );
 };
 
-export default Sidebar;
+export default RightSidebar

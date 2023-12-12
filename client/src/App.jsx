@@ -2,11 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/leaflet";
-import countriesData from "./data/countries.js";
-import useCountryData from "./hooks/useCountryData.jsx";
-import Sidebar from "./components/sidebar/Sidebar";
+import countriesData from "./data/countries.json";
+import useCountryData from "./hooks/useCountryData";
+import RightSidebar from "./components/rightSidebar/RightSidebar";
+import LeftSidebar from "./components/leftSidebar/LeftSidebar";
 import { latLng, latLngBounds } from "leaflet";
-import { MapContainer, TileLayer, Polygon } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 const southwestCorner = latLng([-85.0511, -180]);
 const northeastCorner = latLng([85.0511, 180]);
@@ -15,6 +16,7 @@ const bounds = latLngBounds(southwestCorner, northeastCorner);
 function App() {
   const {
     fetchCountryData,
+    fetchRESTCountryData,
     fetchPeopleIndicatorData,
     fetchEconomicIndicatorData,
     fetchEnvironmentIndicatorData,
@@ -22,32 +24,83 @@ function App() {
 
   const [clickedCountry, setClickedCountry] = useState(null);
   const [countryData, setCountryData] = useState([]);
+  const [restCountryData, setRestCountryData] = useState({});
   const [peopleIndicatorData, setPeopleIndicatorData] = useState([]);
   const [environmentIndicatorData, setEnvironmentIndicatorData] = useState([]);
   const [economicIndicatorData, setEconomicIndicatorData] = useState([]);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
-  const handleCountryClick = async (isClicked, country) => {
-    if (isClicked) {
+  const handleCountryClick = async (country) => {
+    if (clickedCountry === country) {
       setClickedCountry(null);
       setSidebarIsOpen(false);
     } else {
       setClickedCountry(country);
-      const countryData = await fetchCountryData(country.properties.code);
+      const [countryData, restData] = await Promise.all([
+        fetchCountryData(country.properties.ISO_A3),
+        fetchRESTCountryData(country.properties.ADMIN),
+      ]);
+  
       setCountryData(countryData);
+      setRestCountryData(restData);
+
       setPeopleIndicatorData(
-        await fetchPeopleIndicatorData(country.properties.code)
+        await fetchPeopleIndicatorData(country.properties.ISO_A3)
       );
       setEconomicIndicatorData(
-        await fetchEconomicIndicatorData(country.properties.code)
+        await fetchEconomicIndicatorData(country.properties.ISO_A3)
       );
       setEnvironmentIndicatorData(
-        await fetchEnvironmentIndicatorData(country.properties.code)
+        await fetchEnvironmentIndicatorData(country.properties.ISO_A3)
       );
-
       setSidebarIsOpen(true);
-      console.log(economicIndicatorData);
     }
+    console.log(restCountryData)
+  };
+
+  const defaultStyle = {
+    fillColor: "#000",
+    fillOpacity: 0.7,
+    weight: 3,
+    opacity: 0.7,
+    dashArray: 3,
+    color: "black",
+  };
+
+  const highlightStyle = {
+    fillOpacity: 0.7,
+    weight: 5,
+    dashArray: "",
+    color: "#807c7c",
+    fillColor: "#ffffff",
+  };
+
+  const clickStyle = {
+    fillColor: "#fa0000",
+    fillOpacity: 1,
+    weight: 5,
+    opacity: 1,
+    dashArray: "",
+    color: "#807c7c",
+  };
+
+  const onEachCountry = (country, layer) => {
+    layer.on({
+      click: (e) => {
+        e.target.setStyle(clickStyle);
+        handleCountryClick(country);
+      },
+      mouseover: (e) => {
+        if (clickedCountry !== country) {
+          e.target.setStyle(highlightStyle);
+        }
+      },
+      mouseout: (e) => {
+        if (clickedCountry !== country) {
+          e.target.setStyle(defaultStyle);
+        }
+      },
+    });
   };
 
   const handleSidebarClose = () => {
@@ -70,57 +123,12 @@ function App() {
             url="https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=2K46SsHb5CdTvQzDyjPq"
           />
 
-          {countriesData.features.map((country) => {
-            const coordinates = country.geometry.coordinates[0].map((item) => [
-              item[1],
-              item[0],
-            ]);
-
-            const isClicked = clickedCountry === country;
-
-            return (
-              <Polygon
-                key={country}
-                pathOptions={{
-                  fillColor: isClicked ? "#fa0000" : "#000",
-                  fillOpacity: isClicked ? 1 : 0.7,
-                  weight: isClicked ? 5 : 3,
-                  opacity: isClicked ? 1 : 0.7,
-                  dashArray: isClicked ? "" : 3,
-                  color: isClicked ? "#807c7c" : "black",
-                }}
-                positions={coordinates}
-                eventHandlers={{
-                  click: () => handleCountryClick(isClicked, country),
-                  mouseover: (e) => {
-                    if (!isClicked) {
-                      const layer = e.target;
-                      layer.setStyle({
-                        fillOpacity: 0.7,
-                        weight: 5,
-                        dashArray: "",
-                        color: "#807c7c",
-                        fillColor: "#ffffff",
-                      });
-                    }
-                  },
-                  mouseout: (e) => {
-                    if (!isClicked) {
-                      const layer = e.target;
-                      layer.setStyle({
-                        fillOpacity: 0.7,
-                        weight: 3,
-                        dashArray: 3,
-                        color: "black",
-                        fillColor: "#000",
-                      });
-                    }
-                  },
-                }}
-              />
-            );
-          })}
-          <Sidebar
+          <GeoJSON
+            data={countriesData.features}
+            style={defaultStyle}
+            onEachFeature={onEachCountry}
+          />
+          <RightSidebar
             countryData={countryData}
             peopleIndicatorData={peopleIndicatorData}
             environmentIndicatorData={environmentIndicatorData}
@@ -128,6 +136,12 @@ function App() {
             handleSidebarClose={handleSidebarClose}
             clickedCountry={clickedCountry}
             sidebarIsOpen={sidebarIsOpen}
+          />
+          <LeftSidebar 
+            countryData={countryData}
+            restCountryData={restCountryData}
+            sidebarIsOpen={sidebarIsOpen}
+            handleSidebarClose={handleSidebarClose}
           />
         </MapContainer>
       </div>
