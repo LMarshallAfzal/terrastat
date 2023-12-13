@@ -19,7 +19,7 @@ Leonard Marshall Afzal (lmarshallafzal)
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/TerraStat.git
+   git clone https://github.com/LMarshallAfzal/terrastat.git
    ```
 
 2. Navigate to project directory:
@@ -43,7 +43,7 @@ This will launch locally on http://localhost:5173.
 
 ## Deployment
 
-The application is deployed and can be accessed at [here](https://your-deployment-link.com).
+The application is deployed and can be accessed at [here](melodious-baklava-15b238.netlify.app).
 
 ## Technologies Used
 
