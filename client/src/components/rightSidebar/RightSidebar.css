@@ -39,6 +39,14 @@
   background-color: #838587;
 }
 
+.right-sidebar .no-data-message {
+  font-size: x-large;
+  font-weight: bold;
+  width: 100%;
+  padding-top: 15px;
+  margin-bottom: 15px;
+}
+
 .indicator-container h2 {
   font-size: 20px;
   margin: 0 0 10px;

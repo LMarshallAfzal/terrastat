@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./RightSidebar.css";
-import "../../styling/loading.css"
+import "../../styling/loading.css";
+import CountryData from "./countryName/CountryData";
 import PeopleStatistics from "./peopleStats/PeopleStatistics";
 import EnvironmentStatistics from "./environmentStats/EnvironmentStatistics";
 import EconomyStatistics from "./economyStats/EconomyStatistics";
@@ -19,38 +20,9 @@ const RightSidebar = ({
 }) => {
   const [activeIndicator, setActiveIndicator] = useState("people");
 
-  const buttons = [
-    { label: "People" },
-    { label: "Environment" },
-    { label: "Economy" },
-    { label: "States & Markets" },
-    { label: "Global Links" },
-  ];
-
-  const handleButtonClick = (buttonIndex) => {
-    let newActiveIndicator = "";
-
-    switch (buttonIndex) {
-      case 0:
-        newActiveIndicator = "people";
-        break;
-      case 1:
-        newActiveIndicator = "environment";
-        break;
-      case 2:
-        newActiveIndicator = "economy";
-        break;
-      case 3:
-        newActiveIndicator = "states & markets";
-        break;
-      case 4:
-        newActiveIndicator = "global links";
-        break;
-      default:
-        break;
-    }
-    setActiveIndicator(newActiveIndicator);
-  };
+  // const handleSectionError = (error) => {
+  //   setError(`Could not find data. Error: ${error.message}`);
+  // };
 
   return (
     <div
@@ -59,52 +31,37 @@ const RightSidebar = ({
         right: sidebarIsOpen ? "0" : "-400px",
       }}
     >
-      {countryDataLoading ? (
-          <div className="loading-spinner-container">
-            <div className="loading-spinner"></div>
-          </div>
-        ) : (
-      <>
-        <div className="country indicator-container">
-          <h2>{(countryData?.length > 0 && countryData[1][0]?.name) || ""}</h2>
-        </div>
-        <div className="button-row">
-          {buttons?.map((button, index) => (
-            <button
-              className={
-                activeIndicator === button.label.toLowerCase()
-                  ? "indicator-group-button clicked-button"
-                  : "indicator-group-button"
-              }
-              key={index}
-              onClick={() => handleButtonClick(index)}
-            >
-              {button.label}
-            </button>
-          ))}
-        </div>
+      {countryData[0]?.message ? (
+        <div className="no-data-message">No country data available</div>
+      ) : (
+        <>
+          <CountryData
+            countryData={countryData}
+            countryDataLoading={countryDataLoading}
+            setActiveIndicator={setActiveIndicator}
+            activeIndicator={activeIndicator}
+          />
+
+          {activeIndicator === "people" && (
+            <PeopleStatistics
+              peopleIndicatorData={peopleIndicatorData}
+              peopleIndicatorLoading={peopleIndicatorLoading}
+            />
+          )}
+          {activeIndicator === "environment" && (
+            <EnvironmentStatistics
+              environmentIndicatorData={environmentIndicatorData}
+              environmentIndicatorLoading={environmentIndicatorLoading}
+            />
+          )}
+          {activeIndicator === "economy" && (
+            <EconomyStatistics
+              economicIndicatorData={economicIndicatorData}
+              economicIndicatorLoading={economicIndicatorLoading}
+            />
+          )}
         </>
       )}
-      <>
-        {activeIndicator === "people" && (
-          <PeopleStatistics
-            peopleIndicatorData={peopleIndicatorData}
-            peopleIndicatorLoading={peopleIndicatorLoading}
-          />
-        )}
-        {activeIndicator === "environment" && (
-          <EnvironmentStatistics
-            environmentIndicatorData={environmentIndicatorData}
-            environmentIndicatorLoading={environmentIndicatorLoading}
-          />
-        )}
-        {activeIndicator === "economy" && (
-          <EconomyStatistics
-            economicIndicatorData={economicIndicatorData}
-            economicIndicatorLoading={economicIndicatorLoading}
-          />
-        )}
-      </>
       <button onClick={handleSidebarClose}>Close Sidebar</button>
     </div>
   );

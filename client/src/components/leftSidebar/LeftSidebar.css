@@ -25,6 +25,14 @@
   margin: 0 auto 10px;
 }
 
+.left-sidebar .no-data-message {
+  font-size: x-large;
+  font-weight: bold;
+  width: 100%;
+  padding-top: 15px;
+  margin-bottom: 15px;
+}
+
 .indicator-container .img-row {
   display: flex;
   flex-direction: row;

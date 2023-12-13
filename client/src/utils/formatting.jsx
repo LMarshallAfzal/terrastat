@@ -88,7 +88,8 @@ function formatValue(data, postfix = "") {
 
   if (data !== undefined) {
     for (let i = 0; i < data.length; i++) {
-      if (data[1][i]?.value === 0 || data[1][i]?.value !== null) {
+      if (data[1][i]?.value !== null) {
+        // console.log(data.length)
         formattedData = data[1][i]?.value.toFixed(2);
         formattedDate = data[1][i]?.date;
         break;
@@ -113,14 +114,6 @@ function formatRate(value) {
     return value.toFixed(2);
   }
 }
-
-// const formatValue = (value, unit) => {
-//   if (value === 0 || value === null || value === undefined) {
-//     return "---";
-//   } else {
-//     return value + unit;
-//   }
-// };
 
 export {
   formatPopulation,
