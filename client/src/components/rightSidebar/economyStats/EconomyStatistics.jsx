@@ -12,32 +12,31 @@ const PeopleStatistics = ({ economicIndicatorData, economicIndicatorLoading }) =
       <Suspense fallback={<p>Loading...</p>}>
         <LazyGrowthEconomicStructure
           economicIndicatorData={economicIndicatorData}
-          formatPercentage={utils.formatPercentage}
           economicIndicatorLoading={economicIndicatorLoading}
           formatPrice={utils.formatPrice}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <LazyIncomeSavings
           economicIndicatorData={economicIndicatorData}
           economicIndicatorLoading={economicIndicatorLoading}
-          formatPercentage={utils.formatPercentage}
           formatPrice={utils.formatPrice}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <LazyBalanceOfPayments
           economicIndicatorData={economicIndicatorData}
           economicIndicatorLoading={economicIndicatorLoading}
-          formatPercentage={utils.formatPercentage}
-          formatRate={utils.formatRate}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <LazyPricesTermsOfTrade
           economicIndicatorData={economicIndicatorData}
           economicIndicatorLoading={economicIndicatorLoading}
-          formatRate={utils.formatRate}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
@@ -45,7 +44,7 @@ const PeopleStatistics = ({ economicIndicatorData, economicIndicatorLoading }) =
           economicIndicatorData={economicIndicatorData}
           economicIndicatorLoading={economicIndicatorLoading}
           formatPrice={utils.formatPrice}
-          formatPercentage={utils.formatPercentage}
+          formatValue={utils.formatValue}
         />
       </Suspense>
     </>

@@ -1,32 +1,77 @@
 function formatPopulation(population) {
-  if (population < 1000) {
-    return population.toLocaleString();
-  } else if (population < 1000000) {
-    return `${(population / 1000).toFixed(1)}k`;
-  } else if (population < 1000000000) {
-    return `${(population / 1000000).toFixed(1)}m`;
-  } else {
-    return `${(population / 1000000000).toFixed(1)}b`;
-  }
-}
+  let value = 0;
+  let formattedPopulation = 0;
+  let formattedDate = "";
 
-const formatPrice = (value) => {
-  if (value === 0 || value === null || value === undefined) {
-    return "---";
-  } else {
+  if (population !== undefined) {
+    for (let i = 0; i < population.length; i++) {
+      if (population[1][i]?.value !== null) {
+        value = population[1][i]?.value;
+        formattedDate = population[1][i]?.date;
+        break;
+      }
+    }
+
     if (value < 1000) {
-      return `US$${value.toFixed(2)}`;
+      formattedPopulation = value.toLocaleString();
     } else if (value < 1000000) {
-      return `US$${(value / 1000).toFixed(2)}k`;
+      formattedPopulation = `${(value / 1000).toFixed(1)}k`;
     } else if (value < 1000000000) {
-      return `US$${(value / 1000000).toFixed(2)}m`;
+      formattedPopulation = `${(value / 1000000).toFixed(1)}m`;
     } else if (value < 1000000000000) {
-      return `US$${(value / 1000000000).toFixed(2)}b`;
+      formattedPopulation = `${(value / 1000000000).toFixed(1)}b`;
     } else {
-      return `US$${(value / 1000000000000).toFixed(2)}t`;
+      formattedPopulation = "---";
     }
   }
+
+  return (
+    <>
+      <div className="stat-value">{formattedPopulation}</div>
+      <div className="stat-year-label">{formattedDate}</div>
+    </>
+  );
 }
+
+const formatPrice = (data) => {
+  let value = 0;
+  let formattedData = 0;
+  let formattedDate = "";
+  let output = "";
+
+  if (data !== undefined) {
+
+    for (let i = 0; i < data.length; i++) {
+      if (data[1][i]?.value !== null) {
+        value = data[1][i]?.value;
+        formattedDate = data[1][i]?.date;
+        break;
+      }
+    }
+
+    if (value < 1000) {
+      formattedData = `$${value.toFixed(2)}`;
+    } else if (value < 1000000) {
+      formattedData = `$${(value / 1000).toFixed(2)}k`;
+    } else if (value < 1000000000) {
+      formattedData = `$${(value / 1000000).toFixed(2)}m`;
+    } else if (value < 1000000000000) {
+      formattedData = `$${(value / 1000000000).toFixed(2)}b`;
+    } else {
+      formattedData = `$${(value / 1000000000000).toFixed(2)}t`;
+    }
+
+    output = `${formattedData}`;
+  }
+
+    return (
+      <>
+        <div className="stat-value">{value !== 0 ? output : "---"}</div>
+        <div className="stat-year-label">{formattedDate}</div>
+      </>
+    );
+  
+};
 
 function formatPercentage(value) {
   if (value === 0 || value === null || value === undefined) {
@@ -34,6 +79,31 @@ function formatPercentage(value) {
   } else {
     return value.toFixed(2) + "%";
   }
+}
+
+function formatValue(data, postfix = "") {
+  let formattedData = 0;
+  let formattedDate = "";
+  let output = "";
+
+  if (data !== undefined) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[1][i]?.value === 0 || data[1][i]?.value !== null) {
+        formattedData = data[1][i]?.value.toFixed(2);
+        formattedDate = data[1][i]?.date;
+        break;
+      }
+    }
+
+    output = `${formattedData}${postfix}`;
+  }
+
+  return (
+    <>
+      <div className="stat-value">{formattedData !== 0 ? output : "---"}</div>
+      <div className="stat-year-label">{formattedDate}</div>
+    </>
+  );
 }
 
 function formatRate(value) {
@@ -44,12 +114,18 @@ function formatRate(value) {
   }
 }
 
-const formatValue = (value, unit) => {
-  if (value === 0 || value === null || value === undefined) {
-    return "---";
-  } else {
-    return value + unit;
-  }
-};
+// const formatValue = (value, unit) => {
+//   if (value === 0 || value === null || value === undefined) {
+//     return "---";
+//   } else {
+//     return value + unit;
+//   }
+// };
 
-export { formatPopulation, formatPrice, formatPercentage, formatRate, formatValue };
+export {
+  formatPopulation,
+  formatPrice,
+  formatPercentage,
+  formatRate,
+  formatValue,
+};

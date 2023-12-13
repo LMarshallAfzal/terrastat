@@ -4,7 +4,7 @@ import "../../../../styling/loading.css";
 const PricesTermsOfTrade = ({
   economicIndicatorData,
   economicIndicatorLoading,
-  formatRate,
+  formatValue
 }) => {
   return (
     <div className="Prices-terms-of-trade indicator-container">
@@ -18,29 +18,13 @@ const PricesTermsOfTrade = ({
           <div className="stat-row">
             <div className="stats">
               <div className="stat-label">CPI (2010 = 100)</div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatRate(
-                      economicIndicatorData[26][1][0]?.value ||
-                        economicIndicatorData[26][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(economicIndicatorData[26])}
             </div>
             <div className="stats">
               <div className="stat-label">
                 Net barter terms of trade index (2000 = 100)
               </div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatRate(
-                      economicIndicatorData[27][1][0]?.value ||
-                        economicIndicatorData[27][1][0]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(economicIndicatorData[27])}
             </div>
           </div>
         </>

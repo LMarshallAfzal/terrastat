@@ -5,7 +5,7 @@ const LaborProductivity = ({
   economicIndicatorData,
   economicIndicatorLoading,
   formatPrice,
-  formatPercentage,
+  formatValue,
 }) => {
   return (
     <div className="labor-productivity indicator-container">
@@ -19,29 +19,13 @@ const LaborProductivity = ({
           <div className="stat-row">
             <div className="stats">
               <div className="stat-label">GDP per person employed</div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatPrice(
-                      economicIndicatorData[28][1][0]?.value ||
-                        economicIndicatorData[28][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatPrice(economicIndicatorData[28])}
             </div>
             <div className="stats">
               <div className="stat-label">
                 Unemployment, total (% of labor force)
               </div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatPercentage(
-                      economicIndicatorData[29][1][0]?.value ||
-                        economicIndicatorData[29][1][0]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(economicIndicatorData[29], "%")}
             </div>
           </div>
           <div className="stat-row">
@@ -49,39 +33,15 @@ const LaborProductivity = ({
               <div className="stat-label">
                 Agriculture, value added per worker
               </div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatPrice(
-                      economicIndicatorData[30][1][0]?.value ||
-                        economicIndicatorData[30][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatPrice(economicIndicatorData[30])}
             </div>
             <div className="stats">
               <div className="stat-label">Industry, value added per worker</div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatPrice(
-                      economicIndicatorData[31][1][0]?.value ||
-                        economicIndicatorData[31][1][0]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatPrice(economicIndicatorData[31])}
             </div>
             <div className="stats">
               <div className="stat-label">Services, value added per worker</div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatPrice(
-                      economicIndicatorData[32][1][0]?.value ||
-                        economicIndicatorData[32][1][0]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatPrice(economicIndicatorData[32])}
             </div>
           </div>
         </>

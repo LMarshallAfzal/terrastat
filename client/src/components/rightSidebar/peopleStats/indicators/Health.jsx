@@ -1,6 +1,6 @@
 import "../../RightSidebar.css";
 
-const Labor = ({ peopleIndicatorData, peopleIndicatorLoading, formatPercentage, formatRate }) => {
+const Labor = ({ peopleIndicatorData, peopleIndicatorLoading, formatValue }) => {
   return (
     <div className="health indicator-container">
       <h2>Health</h2>
@@ -15,96 +15,39 @@ const Labor = ({ peopleIndicatorData, peopleIndicatorLoading, formatPercentage, 
               <div className="stat-label">
                 Prevalence of stunting, height for age
               </div>
-              <div className="stat-value">
-                {peopleIndicatorData?.length > 0
-                  ? formatPercentage(
-                      peopleIndicatorData[23][1][0]?.value ||
-                        peopleIndicatorData[23][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(peopleIndicatorData[23], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">Maternal mortality ratio</div>
-              <div className="stat-value">
-                {peopleIndicatorData?.length > 0
-                  ? formatRate(
-                      peopleIndicatorData[24][1][0]?.value ||
-                        peopleIndicatorData[24][1][0]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(peopleIndicatorData[24])}
             </div>
           </div>
           <div className="stat-row">
             <div className="stats">
-              <div className="stat-label">Mortality rate, under 5</div>
-              <div className="stat-value">
-                {peopleIndicatorData?.length > 0
-                  ? formatRate(
-                      peopleIndicatorData[25][1][0]?.value ||
-                        peopleIndicatorData[25][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              <div className="stat-label">Child mortality rate</div>
+              {formatValue(peopleIndicatorData[25])}
             </div>
             <div className="stats">
               <div className="stat-label">Incidence of HIV</div>
-              <div className="stat-value">
-                {peopleIndicatorData?.length > 0
-                  ? formatPercentage(
-                      peopleIndicatorData[26][1][0]?.value ||
-                        peopleIndicatorData[26][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(peopleIndicatorData[26], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">
-                Mortality from CVD, cancer, diabetes, or CRD between age 30 and
-                70
+              Mortality between ages 30-70 from CVD, cancer, diabetes, or CRD
               </div>
-              <div className="stat-value">
-                {peopleIndicatorData?.length > 0
-                  ? formatPercentage(
-                      peopleIndicatorData[27][1][0]?.value ||
-                        peopleIndicatorData[27][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(peopleIndicatorData[27], "%")}
             </div>
           </div>
           <div className="stat-row">
             <div className="stats">
               <div className="stat-label">
-                Mortality caused by road traffic injury
+              Road traffic injury mortality rate / 100k people
               </div>
-              <div className="stat-value">
-                {peopleIndicatorData?.length > 0
-                  ? formatRate(
-                      peopleIndicatorData[28][1][0]?.value ||
-                        peopleIndicatorData[28][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(peopleIndicatorData[28], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">Adolescent fertility rate</div>
-              <div className="stat-value">
-                {peopleIndicatorData?.length > 0
-                  ? formatRate(
-                      peopleIndicatorData[29][1][0]?.value ||
-                        peopleIndicatorData[29][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(peopleIndicatorData[29])}
             </div>
           </div>
         </>

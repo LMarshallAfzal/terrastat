@@ -13,22 +13,21 @@ const PeopleStatistics = ({ peopleIndicatorData, peopleIndicatorLoading }) => {
           peopleIndicatorData={peopleIndicatorData}
           peopleIndicatorLoading={peopleIndicatorLoading}
           formatPopulation={utils.formatPopulation}
-          formatRate={utils.formatRate}
-          formatPercentage={utils.formatPercentage}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <LazyEducation
           peopleIndicatorData={peopleIndicatorData}
           peopleIndicatorLoading={peopleIndicatorLoading}
-          formatPercentage={utils.formatPercentage}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <LazyLabor
           peopleIndicatorData={peopleIndicatorData}
           peopleIndicatorLoading={peopleIndicatorLoading}
-          formatPercentage={utils.formatPercentage}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
@@ -37,6 +36,7 @@ const PeopleStatistics = ({ peopleIndicatorData, peopleIndicatorLoading }) => {
           peopleIndicatorLoading={peopleIndicatorLoading}
           formatPercentage={utils.formatPercentage}
           formatRate={utils.formatRate}
+          formatValue={utils.formatValue}
         />
       </Suspense>
     </>

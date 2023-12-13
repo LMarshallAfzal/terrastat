@@ -5,7 +5,6 @@ const Agriculture = ({
   environmentIndicatorData,
   environmentIndicatorLoading,
   formatValue,
-  formatPercentage,
 }) => {
   return (
     <div className="agriculture indicator-container">
@@ -21,45 +20,19 @@ const Agriculture = ({
               <div className="stat-label">
                 Agricultural land (% of land area)
               </div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatPercentage(
-                      environmentIndicatorData[0][1][0]?.value ||
-                        environmentIndicatorData[0][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[0], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">
-                Land under cereal production (hectares)
+                Land under cereal production (ha)
               </div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatValue(
-                      environmentIndicatorData[1][1][0]?.value ||
-                        environmentIndicatorData[1][1][0]?.value ||
-                        0,
-                      "ha"
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[1], "ha")}
             </div>
           </div>
           <div className="stat-row">
             <div className="stats">
               <div className="stat-label">Cereal yield (kg/ha)</div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatValue(
-                      environmentIndicatorData[2][1][0]?.value ||
-                        environmentIndicatorData[2][1][1]?.value ||
-                        0,
-                      "kg/ha"
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[2], "kg/ha")}
             </div>
           </div>
         </>

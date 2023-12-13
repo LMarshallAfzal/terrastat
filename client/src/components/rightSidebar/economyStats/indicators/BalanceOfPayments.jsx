@@ -4,8 +4,7 @@ import "../../../../styling/loading.css";
 const BalanceOfPayments = ({
   economicIndicatorData,
   economicIndicatorLoading,
-  formatPercentage,
-  formatRate,
+  formatValue
 }) => {
   return (
     <div className="balance-of-payments indicator-container">
@@ -19,27 +18,11 @@ const BalanceOfPayments = ({
           <div className="stat-row">
             <div className="stats">
               <div className="stat-label">Export value index (2000 = 100)</div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatRate(
-                      economicIndicatorData[21][1][0]?.value ||
-                        economicIndicatorData[21][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(economicIndicatorData[21])}
             </div>
             <div className="stats">
               <div className="stat-label">Import value index (2000 = 100)</div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatRate(
-                      economicIndicatorData[22][1][0]?.value ||
-                        economicIndicatorData[22][1][0]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(economicIndicatorData[22])}
             </div>
           </div>
           <div className="stat-row">
@@ -47,43 +30,19 @@ const BalanceOfPayments = ({
               <div className="stat-label">
                 Personal remittances, received (% of GDP)
               </div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatPercentage(
-                      economicIndicatorData[23][1][0]?.value ||
-                        economicIndicatorData[23][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(economicIndicatorData[23], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">
                 Current account balance (% of GDP)
               </div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatPercentage(
-                      economicIndicatorData[24][1][0]?.value ||
-                        economicIndicatorData[24][1][0]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(economicIndicatorData[24], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">
                 Foreign direct investment, net inflows (% of GDP)
               </div>
-              <div className="stat-value">
-                {economicIndicatorData?.length > 0
-                  ? formatPercentage(
-                      economicIndicatorData[25][1][0]?.value ||
-                        economicIndicatorData[25][1][0]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(economicIndicatorData[25], "%")}
             </div>
           </div>
         </>

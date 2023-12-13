@@ -21,30 +21,28 @@ const EnvironmentStatistics = ({ environmentIndicatorData, environmentIndicatorL
         <LazyClimate
           environmentIndicatorData={environmentIndicatorData}
           environmentIndicatorLoading={environmentIndicatorLoading}
-          formatPercentage={utils.formatPercentage}
-          formatRate={utils.formatRate}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <LazyEnergyMining
           environmentIndicatorData={environmentIndicatorData}
           environmentIndicatorLoading={environmentIndicatorLoading}
-          formatPercentage={utils.formatPercentage}
-          formatRate={utils.formatRate}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <LazyEnvironment
           environmentIndicatorData={environmentIndicatorData}
           environmentIndicatorLoading={environmentIndicatorLoading}
-          formatPercentage={utils.formatPercentage}
+          formatValue={utils.formatValue}
         />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <LazyUrbanRuralDevelopment
           environmentIndicatorData={environmentIndicatorData}
           environmentIndicatorLoading={environmentIndicatorLoading}
-          formatPercentage={utils.formatPercentage}
+          formatValue={utils.formatValue}
         />
       </Suspense>
     </>

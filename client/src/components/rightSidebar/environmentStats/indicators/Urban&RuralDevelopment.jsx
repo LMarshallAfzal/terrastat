@@ -4,7 +4,7 @@ import "../../../../styling/loading.css";
 const UrbanRuralDevelopment = ({
   environmentIndicatorData,
   environmentIndicatorLoading,
-  formatPercentage,
+  formatValue
 }) => {
   return (
     <div className="urban-rural-development indicator-container">
@@ -20,49 +20,21 @@ const UrbanRuralDevelopment = ({
               <div className="stat-label">
                 Access to electricity, urban (% of urban population)
               </div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatPercentage(
-                      environmentIndicatorData[16][1][0]?.value ||
-                        environmentIndicatorData[16][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[16], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">
                 People using at least basic drinking water services, urban (% of
                 urban population)
               </div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatPercentage(
-                      environmentIndicatorData[17][1][0]?.value ||
-                        environmentIndicatorData[17][1][1]?.value ||
-                        environmentIndicatorData[17][1][2]?.value ||
-                        environmentIndicatorData[17][1][3]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[17], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">
                 People using at least basic sanitation services, urban (% of
                 urban population)
               </div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatPercentage(
-                      environmentIndicatorData[18][1][0]?.value ||
-                        environmentIndicatorData[18][1][1]?.value ||
-                        environmentIndicatorData[18][1][2]?.value ||
-                        environmentIndicatorData[18][1][3]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[18], "%")}
             </div>
           </div>
           <div className="stat-row">
@@ -70,45 +42,21 @@ const UrbanRuralDevelopment = ({
               <div className="stat-label">
                 Access to electricity, rural (% of rural population)
               </div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatPercentage(
-                      environmentIndicatorData[19][1][0]?.value ||
-                        environmentIndicatorData[19][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[19], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">
                 People using at least basic sanitation services, rural (% of
                 rural population)
               </div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatPercentage(
-                      environmentIndicatorData[20][1][0]?.value ||
-                        environmentIndicatorData[20][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[20], "%")}
             </div>
             <div className="stats">
               <div className="stat-label">
                 People using at least basic drinking water services, rural (% of
                 rural population)
               </div>
-              <div className="stat-value">
-                {environmentIndicatorData?.length > 0
-                  ? formatPercentage(
-                      environmentIndicatorData[21][1][0]?.value ||
-                        environmentIndicatorData[21][1][1]?.value ||
-                        0
-                    )
-                  : "---"}
-              </div>
+              {formatValue(environmentIndicatorData[22], "%")}
             </div>
           </div>
         </>
