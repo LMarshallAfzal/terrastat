@@ -45,8 +45,11 @@ const LeftSidebar = ({
                 <img
                   className="flag"
                   src={
-                    restCountryData[0]?.flags.png ||
-                    "src/assets/no-data-flag.jpg"
+                    restCountryData.length > 1
+                      ? restCountryData[1]?.flags.png ||
+                        "src/assets/no-data-flag.jpg"
+                      : restCountryData[0]?.flags.png ||
+                        "src/assets/no-data-flag.jpg"
                   }
                   alt="Country flag"
                 />
