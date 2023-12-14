@@ -51,6 +51,32 @@ const LeftSidebar = ({
                   alt="Country flag"
                 />
               </div>
+              <div className="region indicator-container">
+                <div className="geo-stats">
+                  <div className="stat-label">Region</div>
+                  <div className="stat-value">
+                    {(countryData?.length > 0 &&
+                      countryData[1][0]?.region?.value) ||
+                      ""}
+                  </div>
+                </div>
+                <div className="geo-stats">
+                  <div className="stat-label">Capital</div>
+                  <div className="stat-value">
+                    {(countryData?.length > 0 &&
+                      countryData[1][0]?.capitalCity) ||
+                      ""}
+                  </div>
+                </div>
+                <div className="geo-stats">
+                  <div className="stat-label">Income level</div>
+                  <div className="stat-value">
+                    {(countryData?.length > 0 &&
+                      countryData[1][0]?.incomeLevel?.value) ||
+                      ""}
+                  </div>
+                </div>
+              </div>
               <div className="indicator-container">
                 <MapContainer
                   // center={restCountryData[0]?.latlng}

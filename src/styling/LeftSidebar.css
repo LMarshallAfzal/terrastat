@@ -25,6 +25,15 @@
   margin: 0 auto 10px;
 }
 
+.indicator-container h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.indicator-container p {
+  margin-bottom: 5px;
+}
+
 .left-sidebar .no-data-message {
   font-size: x-large;
   font-weight: bold;
@@ -51,11 +60,23 @@
   border: 3px solid #000000;
 }
 
-.indicator-container h2 {
-  font-size: 20px;
-  margin: 0 0 10px;
+.indicator-container .geo-stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.indicator-container p {
-  margin-bottom: 5px;
+.geo-stats {
+  margin-bottom: 10px;
 }
+
+.geo-stats .stat-label {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.geo-stats .stat-value {
+  font-size: medium;
+  width: 100%;
+}
+
