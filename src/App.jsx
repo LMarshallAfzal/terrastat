@@ -167,6 +167,7 @@ function App() {
           <LeftSidebar
             countryData={countryData}
             restCountryData={restCountryData}
+            countryDataLoading={countryDataLoading}
             restCountryLoading={restCountryLoading}
             sidebarIsOpen={sidebarIsOpen}
             handleSidebarClose={handleSidebarClose}
