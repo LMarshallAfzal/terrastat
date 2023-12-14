@@ -4,7 +4,7 @@ function formatPopulation(population) {
   let formattedDate = "";
 
   if (population !== undefined) {
-    for (let i = 0; i < population.length; i++) {
+    for (let i = 0; i < population[1].length; i++) {
       if (population[1][i]?.value !== null) {
         value = population[1][i]?.value;
         formattedDate = population[1][i]?.date;
@@ -41,7 +41,7 @@ const formatPrice = (data) => {
 
   if (data !== undefined) {
 
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data[1].length; i++) {
       if (data[1][i]?.value !== null) {
         value = data[1][i]?.value;
         formattedDate = data[1][i]?.date;
@@ -73,23 +73,14 @@ const formatPrice = (data) => {
   
 };
 
-function formatPercentage(value) {
-  if (value === 0 || value === null || value === undefined) {
-    return "---";
-  } else {
-    return value.toFixed(2) + "%";
-  }
-}
-
 function formatValue(data, postfix = "") {
   let formattedData = 0;
   let formattedDate = "";
   let output = "";
 
   if (data !== undefined) {
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data[1].length; i++) {
       if (data[1][i]?.value !== null) {
-        // console.log(data.length)
         formattedData = data[1][i]?.value.toFixed(2);
         formattedDate = data[1][i]?.date;
         break;
@@ -107,18 +98,8 @@ function formatValue(data, postfix = "") {
   );
 }
 
-function formatRate(value) {
-  if (value === 0 || value === null || value === undefined) {
-    return "---";
-  } else {
-    return value.toFixed(2);
-  }
-}
-
 export {
   formatPopulation,
   formatPrice,
-  formatPercentage,
-  formatRate,
   formatValue,
 };
