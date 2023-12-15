@@ -46,11 +46,13 @@ function App() {
     fetchPeopleIndicatorData,
     fetchEconomicIndicatorData,
     fetchEnvironmentIndicatorData,
+    fetchStatesMarketsIndicatorData,
     restCountryLoading,
     countryDataLoading,
     peopleIndicatorLoading,
     economicIndicatorLoading,
     environmentIndicatorLoading,
+    statesMarketsIndicatorLoading
   } = useCountryData();
 
   const [clickedCountry, setClickedCountry] = useState(null);
@@ -58,6 +60,7 @@ function App() {
   const [restCountryData, setRestCountryData] = useState({});
   const [peopleIndicatorData, setPeopleIndicatorData] = useState([]);
   const [environmentIndicatorData, setEnvironmentIndicatorData] = useState([]);
+  const [statesMarketsIndicatorData, setStatesMarketsIndicatorData] = useState([]);
   const [economicIndicatorData, setEconomicIndicatorData] = useState([]);
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const [countryStyles, setCountryStyles] = useState({});
@@ -90,6 +93,9 @@ function App() {
       );
       setEnvironmentIndicatorData(
         await fetchEnvironmentIndicatorData(country.properties.ISO_A3)
+      );
+      setStatesMarketsIndicatorData(
+        await fetchStatesMarketsIndicatorData(country.properties.ISO_A3)
       );
 
       setCountryStyles({
@@ -155,12 +161,14 @@ function App() {
           <RightSidebar
             countryData={countryData}
             peopleIndicatorData={peopleIndicatorData}
-            environmentIndicatorData={environmentIndicatorData}
             economicIndicatorData={economicIndicatorData}
+            environmentIndicatorData={environmentIndicatorData}
+            statesMarketsIndicatorData={statesMarketsIndicatorData}
             countryDataLoading={countryDataLoading}
             peopleIndicatorLoading={peopleIndicatorLoading}
             economicIndicatorLoading={economicIndicatorLoading}
             environmentIndicatorLoading={environmentIndicatorLoading}
+            statesMarketsIndicatorLoading={statesMarketsIndicatorLoading}
             handleSidebarClose={handleSidebarClose}
             sidebarIsOpen={sidebarIsOpen}
           />

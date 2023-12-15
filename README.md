@@ -31,7 +31,7 @@ Leonard Marshall Afzal (lmarshallafzal)
 3. Install dependencies:
 
    ```bash
-   cd TerraStat
+   npm install
    ```
 
 4. Start application
@@ -43,7 +43,7 @@ This will launch locally on http://localhost:5173.
 
 ## Deployment
 
-The application is deployed and can be accessed at [here](melodious-baklava-15b238.netlify.app).
+The application is deployed and can be accessed at [here](https://melodious-baklava-15b238.netlify.app).
 
 ## Technologies Used
 
