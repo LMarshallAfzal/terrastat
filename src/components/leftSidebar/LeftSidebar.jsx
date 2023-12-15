@@ -42,7 +42,16 @@ const LeftSidebar = ({
                 <h2>
                   {(countryData?.length > 0 && countryData[1][0]?.name) || ""}
                 </h2>
-                {restCountryData[0]?.name.common !== "Georgia" ? (
+                {restCountryData[0]?.name.common === "Georgia" || restCountryData[0]?.name.common === "Netherlands" ? (
+                  <img
+                    className="flag"
+                    src={
+                      restCountryData[0]?.flags.png ||
+                      "src/assets/no-data-flag.jpg"
+                    }
+                    alt="Country flag"
+                  />
+                ) : (
                   <img
                     className="flag"
                     src={
@@ -51,15 +60,6 @@ const LeftSidebar = ({
                           "src/assets/no-data-flag.jpg"
                         : restCountryData[0]?.flags.png ||
                           "src/assets/no-data-flag.jpg"
-                    }
-                    alt="Country flag"
-                  />
-                ) : (
-                  <img
-                    className="flag"
-                    src={
-                      restCountryData[0]?.flags.png ||
-                      "src/assets/no-data-flag.jpg"
                     }
                     alt="Country flag"
                   />

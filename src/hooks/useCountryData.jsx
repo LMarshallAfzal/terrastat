@@ -2,6 +2,7 @@ import { useState } from "react";
 import peopleIndicators from "../data/people-indicators";
 import economicIndicators from "../data/economic-indicators";
 import environmentIndicators from "../data/environment-indicators";
+import statesAndMarketsIndicators from "../data/states&markets-indicators";
 
 const useCountryData = () => {
   const [restCountryLoading, setRestCountryLoading] = useState(false);
@@ -9,6 +10,11 @@ const useCountryData = () => {
   const [peopleIndicatorLoading, setPeopleIndicatorLoading] = useState(false);
   const [economicIndicatorLoading, setEconomicIndicatorLoading] = useState(false);
   const [environmentIndicatorLoading, setEnvironmentIndicatorLoading] = useState(false);
+  const [statesMarketsIndicatorLoading, setStatesMarketsIndicatorLoading] = useState(false);
+
+  
+  const startDate = new Date().getFullYear() - 6;
+  const currentDate = new Date().getFullYear();
 
   const fetchRESTCountryData = async (countryName) => {
     try {
@@ -45,7 +51,7 @@ const useCountryData = () => {
     try {
       setPeopleIndicatorLoading(true);
       const promises = peopleIndicators.map(async (indicator) => {
-        const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
+        const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?date=${startDate}:${currentDate}&format=json`;
         const response = await fetch(url, { mode: 'cors' });
         return await response.json();
       });
@@ -64,7 +70,7 @@ const useCountryData = () => {
     try {
       setEconomicIndicatorLoading(true);
       const promises = economicIndicators.map(async (indicator) => {
-        const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
+        const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?date=${startDate}:${currentDate}&format=json`;
         const response = await fetch(url, { mode: 'cors' });
         return await response.json();
       });
@@ -83,7 +89,7 @@ const useCountryData = () => {
     try {
       setEnvironmentIndicatorLoading(true);
       const promises = environmentIndicators.map(async (indicator) => {
-        const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?format=json`;
+        const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?date=${startDate}:${currentDate}&format=json`;
         const response = await fetch(url, { mode: 'cors' });
         return await response.json();
       });
@@ -98,17 +104,38 @@ const useCountryData = () => {
     }
   };
 
+  const fetchStatesMarketsIndicatorData = async (countryCode) => {
+    try {
+      setStatesMarketsIndicatorLoading(true);
+      const promises = statesAndMarketsIndicators.map(async (indicator) => {
+        const url = `https://api.worldbank.org/v2/country/${countryCode}/indicator/${indicator}?date=${startDate}:${currentDate}&format=json`;
+        const response = await fetch(url, { mode: 'cors' });
+        return await response.json();
+      });
+
+      const data = await Promise.all(promises);
+      setStatesMarketsIndicatorLoading(false);
+      return data;
+    } catch (error) {
+      setStatesMarketsIndicatorLoading(false);
+      console.error(`Error fetching people indicator data: ${error.message}`);
+      return {};
+    }
+  };
+
   return {
     fetchCountryData,
     fetchRESTCountryData,
     fetchPeopleIndicatorData,
     fetchEnvironmentIndicatorData,
     fetchEconomicIndicatorData,
+    fetchStatesMarketsIndicatorData,
     restCountryLoading,
     countryDataLoading,
     peopleIndicatorLoading,
     economicIndicatorLoading,
     environmentIndicatorLoading,
+    statesMarketsIndicatorLoading
   };
 };
 
