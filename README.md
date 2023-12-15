@@ -31,7 +31,7 @@ Leonard Marshall Afzal (lmarshallafzal)
 3. Install dependencies:
 
    ```bash
-   cd TerraStat
+   npm install
    ```
 
 4. Start application
