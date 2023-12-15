@@ -5,16 +5,19 @@ import CountryData from "./countryName/CountryData";
 import PeopleStatistics from "./peopleStats/PeopleStatistics";
 import EnvironmentStatistics from "./environmentStats/EnvironmentStatistics";
 import EconomyStatistics from "./economyStats/EconomyStatistics";
+import StatesMarketsStatistics from "./statesMarkets/States&MarketsStatistics";
 
 const RightSidebar = ({
   countryData,
   peopleIndicatorData,
   environmentIndicatorData,
   economicIndicatorData,
+  statesMarketsIndicatorData,
   countryDataLoading,
   peopleIndicatorLoading,
   economicIndicatorLoading,
   environmentIndicatorLoading,
+  statesMarketsIndicatorLoading,
   handleSidebarClose,
   sidebarIsOpen,
 }) => {
@@ -58,6 +61,12 @@ const RightSidebar = ({
             <EconomyStatistics
               economicIndicatorData={economicIndicatorData}
               economicIndicatorLoading={economicIndicatorLoading}
+            />
+          )}
+          {activeIndicator === "states & markets" && (
+            <StatesMarketsStatistics
+              statesMarketsIndicatorData={statesMarketsIndicatorData}
+              statesMarketsIndicatorLoading={statesMarketsIndicatorLoading}
             />
           )}
         </>
